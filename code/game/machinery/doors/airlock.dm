@@ -1349,7 +1349,6 @@ About the new airlock wires panel:
 					spawn( 0 )
 						src.operating = 1
 						animate_("closing")
-
 						layer = 3.1
 						src.density = 1
 						sleep(15)
