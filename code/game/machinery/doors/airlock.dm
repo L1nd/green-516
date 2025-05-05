@@ -388,7 +388,7 @@ About the new airlock wires panel:
 		if(AIRLOCK_WIRE_IDSCAN)
 			//Sending a pulse through this flashes the red light on the door (if the door has power).
 			if((src.arePowerSystemsOn()) && (!(stat & NOPOWER)))
-				animate("deny")
+				animate_("deny")
 		if(AIRLOCK_WIRE_MAIN_POWER1, AIRLOCK_WIRE_MAIN_POWER2)
 			//Sending a pulse through either one causes a breaker to trip, disabling the door for 10 seconds if backup power is connected, or 1 minute if not (or until backup power comes back on, whichever is shorter).
 			src.loseMainPower()
@@ -737,7 +737,7 @@ About the new airlock wires panel:
 
 	return
 
-/obj/machinery/door/airlock/animate(animation)
+/obj/machinery/door/airlock/animate_(animation)
 	switch(animation)
 		if("opening")
 			if(overlays) overlays = null
@@ -1296,7 +1296,7 @@ About the new airlock wires panel:
 				if(F:wielded)
 					spawn( 0 )
 						src.operating = 1
-						animate("opening")
+						animate_("opening")
 
 						sleep(15)
 
@@ -1313,7 +1313,7 @@ About the new airlock wires panel:
 			else
 				spawn( 0 )
 					src.operating = 1
-					animate("opening")
+					animate_("opening")
 
 					sleep(15)
 
@@ -1333,7 +1333,7 @@ About the new airlock wires panel:
 					if(F:wielded)
 						spawn( 0 )
 							src.operating = 1
-							animate("closing")
+							animate_("closing")
 
 							layer = 3.1
 							src.density = 1
@@ -1348,7 +1348,7 @@ About the new airlock wires panel:
 				else
 					spawn( 0 )
 						src.operating = 1
-						animate("closing")
+						animate_("closing")
 
 						layer = 3.1
 						src.density = 1
@@ -1535,7 +1535,7 @@ About the new airlock wires panel:
 		if(AIRLOCK_WIRE_IDSCAN)
 			//Sending a pulse through this flashes the red light on the door (if the door has power).
 			if ((src.arePowerSystemsOn()) && (!(stat & NOPOWER)))
-				animate("deny")
+				animate_("deny")
 		if (AIRLOCK_WIRE_MAIN_POWER1, AIRLOCK_WIRE_MAIN_POWER2)
 			//Sending a pulse through either one causes a breaker to trip, disabling the door for 10 seconds if backup power is connected, or 1 minute if not (or until backup power comes back on, whichever is shorter).
 			src.loseMainPower()
@@ -1732,7 +1732,7 @@ About the new airlock wires panel:
 		if(AIRLOCK_WIRE_IDSCAN)
 			//Sending a pulse through this flashes the red light on the door (if the door has power).
 			if ((src.arePowerSystemsOn()) && (!(stat & NOPOWER)))
-				animate("deny")
+				animate_("deny")
 		if (AIRLOCK_WIRE_MAIN_POWER1, AIRLOCK_WIRE_MAIN_POWER2)
 			//Sending a pulse through either one causes a breaker to trip, disabling the door for 10 seconds if backup power is connected, or 1 minute if not (or until backup power comes back on, whichever is shorter).
 			src.loseMainPower()
