@@ -274,7 +274,7 @@ obj/machinery/atmospherics/pipe
 
 	simple/general
 		name="Pipe"
-		color=""
+		color="grey"
 		icon_state = ""
 
 	simple/scrubbers/visible

@@ -260,11 +260,11 @@
 /obj/item/weapon/pepperspray/attack_self(var/mob/user as mob)
 	if(safety_on)
 		user << "\blue You flip the safety off."
-		safety_osafety_on = 0
+		safety_on = 0
 		return
 	else
 		user << "\blue You flip the safety on."
-		safety_osafety_on = 1
+		safety_on = 1
 		return
 
 /obj/item/weapon/pepperspray/afterattack(atom/A as mob|obj, mob/user as mob)
@@ -406,11 +406,11 @@
 /obj/item/weapon/pepperspray/elited/attack_self(var/mob/user as mob)
 	if(safety_on)
 		user << "\blue You flip the safety off."
-		safety_osafety_on = 0
+		safety_on = 0
 		return
 	else
 		user << "\blue You flip the safety on."
-		safety_osafety_on = 1
+		safety_on = 1
 		return
 
 /obj/item/weapon/pepperspray/elited/afterattack(atom/A as mob|obj, mob/user as mob)
