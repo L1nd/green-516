@@ -4,7 +4,7 @@
 CONTAINS:
 RCD
 */
-/
+
 /obj/item/weapon/rcd
 	name = "rapid-construction-device (RCD)"
 	desc = "A device used to rapidly build walls/floor."

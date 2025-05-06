@@ -213,13 +213,13 @@
 		deathmatch.spawn_point = new/list(2)
 		deathmatch.spawn_point[1] = locate(117,75,2)
 		deathmatch.jumpsuit = new/list(2)
-		deathmatch.jumpsuit[1] = /obj/item/clothing/under/color/red
+		deathmatch.jumpsuit[1] = /obj/item/clothing/under/color_/red
 		deathmatch.radiofreq = new/list(2)
 		deathmatch.radiofreq[1] = 1221
 		deathmatch.teamname[2] = "Green team"
 		deathmatch.lastnames[2] = pick("Baer","Kadel","Noton")
 		deathmatch.spawn_point[2] = locate(139,75,2)
-		deathmatch.jumpsuit[2] = /obj/item/clothing/under/color/green
+		deathmatch.jumpsuit[2] = /obj/item/clothing/under/color_/green
 		deathmatch.radiofreq[2] = 1241
 		deathmatch.logmessage("Deathmatch created.")
 

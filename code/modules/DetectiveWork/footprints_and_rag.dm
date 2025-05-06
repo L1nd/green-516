@@ -149,11 +149,11 @@ proc/get_tracks(mob/M)
 
 
 proc/blood_incompatible(donor,receiver)
-	var
-		donor_antigen = copytext(donor,1,length(donor))
-		receiver_antigen = copytext(receiver,1,length(receiver))
-		donor_rh = findtext("+",donor)
-		receiver_rh = findtext("+",receiver)
+	
+	var/donor_antigen = copytext(donor,1,length(donor))
+	var/receiver_antigen = copytext(receiver,1,length(receiver))
+	var/donor_rh = findtext("+",donor)
+	var/receiver_rh = findtext("+",receiver)
 	if(donor_rh && !receiver_rh) return 1
 	switch(receiver_antigen)
 		if("A")

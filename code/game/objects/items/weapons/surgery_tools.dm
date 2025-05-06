@@ -1307,7 +1307,7 @@ CIRCULAR SAW
 				M:brain_op_stage = 3.0
 			else
 				..()
-			return
+				return 
 
 	if(user.zone_sel.selecting == "eyes")
 

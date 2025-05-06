@@ -500,9 +500,9 @@ As such, it's hard-coded for now. No reason for it not to be, really.
 	var/obj/item/device/radio/R = new /obj/item/device/radio/headset(src)
 	equip_if_possible(R, slot_ears)
 	if(gender==FEMALE)
-		equip_if_possible(new /obj/item/clothing/under/color/blackf(src), slot_w_uniform)
+		equip_if_possible(new /obj/item/clothing/under/color_/blackf(src), slot_w_uniform)
 	else
-		equip_if_possible(new /obj/item/clothing/under/color/black(src), slot_w_uniform)
+		equip_if_possible(new /obj/item/clothing/under/color_/black(src), slot_w_uniform)
 	equip_if_possible(new /obj/item/clothing/shoes/space_ninja(src), slot_shoes)
 	equip_if_possible(new /obj/item/clothing/suit/space/space_ninja(src), slot_wear_suit)
 	equip_if_possible(new /obj/item/clothing/gloves/space_ninja(src), slot_gloves)
@@ -535,7 +535,7 @@ As such, it's hard-coded for now. No reason for it not to be, really.
 		U:gloves.item_state = "s-ninjan"
 	else
 		if(U.mind.special_role!="Space Ninja")
-			U << "\red <B>fÄTaL ÈÈRRoR</B>: 382200-*#00CÖDE <B>RED</B>\nUNAU†HORIZED USÈ DETÈC†††eD\nCoMMÈNCING SUB-R0U†IN3 13...\nTÈRMInATING U-U-USÈR..."
+			U << "\red <B>fï¿½TaL ï¿½ï¿½RRoR</B>: 382200-*#00Cï¿½DE <B>RED</B>\nUNAUï¿½HORIZED USï¿½ DETï¿½Cï¿½ï¿½ï¿½eD\nCoMMï¿½NCING SUB-R0Uï¿½IN3 13...\nTï¿½RMInATING U-U-USï¿½R..."
 			U.gib()
 			return 0
 		if(!istype(U:head, /obj/item/clothing/head/helmet/space/space_ninja))

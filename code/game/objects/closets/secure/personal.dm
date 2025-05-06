@@ -17,7 +17,7 @@
 	contents = list()
 	spawn(4)
 		new /obj/item/clothing/suit/patientgown( src )
-		new /obj/item/clothing/under/color/white( src )
+		new /obj/item/clothing/under/color_/white( src )
 		new /obj/item/clothing/shoes/white( src )
 	return
 

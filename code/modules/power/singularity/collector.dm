@@ -39,7 +39,6 @@
 			else
 				user << "\red The controls are locked!"
 				return
-	..()
 
 
 	attackby(obj/item/W, mob/user)

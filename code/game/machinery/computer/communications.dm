@@ -89,7 +89,7 @@
 							if(SEC_LEVEL_BLUE)
 								feedback_inc("alert_comms_blue",1)
 					tmp_alertlevel = 0
-				else:
+				else
 					usr << "You are not authorized to do this."
 					tmp_alertlevel = 0
 				state = STATE_DEFAULT

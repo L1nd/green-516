@@ -18,7 +18,7 @@
 	response_disarm = "gently pushes aside the"
 	response_harm   = "splats the"
 	density = 0
-	var/color	//brown, gray and white
+	var/color_	//brown, gray and white
 	layer = 2.5		//so they can hide under objects
 
 /mob/living/simple_animal/mouse/Life()
