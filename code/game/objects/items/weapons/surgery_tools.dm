@@ -248,11 +248,11 @@ CIRCULAR SAW
 		return 0
 
 	if(S.status & ORGAN_DESTROYED)
-		return ..()
+		return 0
 
 	if(S.status & ORGAN_ROBOT)
 		user << "Medical equipment for a robot arm?  How would that do any good..."
-		return
+		return 0
 
 	if(!S.open)
 		user << "\red There is skin in the way!"
@@ -571,7 +571,7 @@ CIRCULAR SAW
 		return 0
 
 	if(S.status & ORGAN_DESTROYED)
-		return ..()
+		return 0
 
 	if(S.status & ORGAN_ROBOT)
 		user << "Medical equipment for a robot arm?  How would that do any good?"
@@ -1432,11 +1432,11 @@ CIRCULAR SAW
 		return 0
 
 	if(S.status & ORGAN_DESTROYED)
-		return ..()
+		return 0
 
 	if(S.status & ORGAN_ROBOT)
 		user << "Medical equipment for a robot arm?  How would that do any good..."
-		return
+		return 0
 
 	if(S.open)
 		user << "\red The wound is already open!"

@@ -36,7 +36,7 @@
 	//blinded get reset each cycle and then get activated later in the
 	//code. Very ugly. I dont care. Moving this stuff here so its easy
 	//to find it.
-	src.blinded = null
+	src.blinded = 0
 
 	//Disease Check
 	handle_virus_updates()
@@ -454,6 +454,7 @@
 				else	//Not stunned.
 					src.lying = 0
 					src.stat = 0
+					src.blinded = 0
 
 			else //Dead.
 				src.lying = 1

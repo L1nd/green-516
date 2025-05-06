@@ -86,7 +86,7 @@
 	//blinded get reset each cycle and then get activated later in the
 	//code. Very ugly. I dont care. Moving this stuff here so its easy
 	//to find it.
-	blinded = null
+	blinded = 0
 
 	//Update Mind
 	update_mind()
@@ -1087,7 +1087,7 @@
 					if (paralysis > 0)
 						handle_dreams()
 						AdjustParalysis(-1)
-						blinded = 1
+						blinded = 0
 						lying = 1
 						stat = 1
 
@@ -1101,7 +1101,7 @@
 
 						handle_dreams()
 						adjustHalLoss(-5)
-						blinded = 1
+						blinded = 0
 						lying = 1
 						stat = 1
 						if (prob(10) && health && !hal_crit)
@@ -1149,7 +1149,7 @@
 			drip(blood_max)
 			if (eye_blind)
 				eye_blind--
-				blinded = 1
+				blinded = 0
 
 			if (ear_deaf > 0) ear_deaf--
 			if (ear_damage < 25)
@@ -1159,7 +1159,7 @@
 			density = !( lying )
 
 			if ((disabilities & 128 || istype(glasses, /obj/item/clothing/glasses/blindfold)))
-				blinded = 1
+				blinded = 0
 			if ((disabilities & 32 || istype(l_ear, /obj/item/clothing/ears/earmuffs) || istype(r_ear, /obj/item/clothing/ears/earmuffs)))
 				ear_deaf = 1
 
