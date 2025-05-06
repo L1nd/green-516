@@ -225,7 +225,7 @@ swapmap
 		S["y"] << y2-y1+1
 		S["x"] << x2-x1+1
 		S["areas"] << areas
-		for(n in 1 to areas.len) areas[areas[n]]=n
+	//	for(n in 1 to areas.len) areas[areas[n]]=n
 		var/oldcd=S.cd
 		for(z=z1,z<=z2,++z)
 			S.cd="[z-z1+1]"
