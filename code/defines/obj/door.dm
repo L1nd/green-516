@@ -22,7 +22,6 @@
 	desc = "Apply crowbar to open."
 	icon = 'Doorfire.dmi'
 	icon_state = "door0"
-	
 	var/blocked = null
 	opacity = 0
 	density = 0

@@ -249,7 +249,7 @@
 		return
 
 
-	animate(animation)
+	animate_(animation)
 		switch(animation)
 			if("opening")
 				if(p_open)
@@ -273,7 +273,7 @@
 		if(!ticker)	return 0
 		if(!src.operating) //in case of emag
 			src.operating = 1
-		animate("opening")
+		animate_("opening")
 		icon_state = "door0"
 		src.ul_SetOpacity(0)
 		sleep(10)
@@ -314,7 +314,7 @@
 						held = 1
 				for(var/mob/living/T in objects) //Geez, ghosts were OP.
 					held = 1
-		animate("closing")
+		animate_("closing")
 		src.density = 1
 		spawn(4)
 			if(!istype(src, /obj/machinery/door/window))
