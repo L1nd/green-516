@@ -250,10 +250,10 @@ atom/movable
 			airflow_dest = null
 			return
 		airflow_speed = min(max(n * (9/airflow_falloff),1),9)
-		var
-			xo = airflow_dest.x - src.x
-			yo = airflow_dest.y - src.y
-			od = 0
+		
+		var/xo = airflow_dest.x - src.x
+		var/yo = airflow_dest.y - src.y
+		var/od = 0
 		airflow_dest = null
 		if(!density)
 			density = 1
@@ -306,10 +306,9 @@ atom/movable
 			airflow_dest = null
 			return
 		airflow_speed = min(max(n * (9/airflow_falloff),1),9)
-		var
-			xo = -(airflow_dest.x - src.x)
-			yo = -(airflow_dest.y - src.y)
-			od = 0
+		var/xo = -(airflow_dest.x - src.x)
+		var/yo = -(airflow_dest.y - src.y)
+		var/od = 0
 		airflow_dest = null
 		if(!density)
 			density = 1

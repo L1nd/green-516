@@ -65,11 +65,10 @@
 
 proc/ZMerge(zone/A,zone/B)
 	//Merges two zones so that they are one.
-	var
-		a_size = A.air.group_multiplier
-		b_size = B.air.group_multiplier
-		c_size = a_size + b_size
-		new_contents = A.contents + B.contents
+	var/a_size = A.air.group_multiplier
+	var/b_size = B.air.group_multiplier
+	var/c_size = a_size + b_size
+	var/new_contents = A.contents + B.contents
 
 	//Set air multipliers to one so air represents gas per tile.
 	A.air.group_multiplier = 1

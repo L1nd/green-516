@@ -85,12 +85,11 @@ obj
 				if(!S.zone) DelMe() //Cannot exist where zones are broken.
 
 				if(istype(S,/turf/simulated/floor))
-					var
-						datum/gas_mixture/air_contents = S.return_air()
+					var/datum/gas_mixture/air_contents = S.return_air()
 						//Get whatever trace fuels are in the area
-						datum/gas/volatile_fuel/fuel = locate(/datum/gas/volatile_fuel/) in air_contents.trace_gases
+					var/datum/gas/volatile_fuel/fuel = locate(/datum/gas/volatile_fuel/) in air_contents.trace_gases
 						//Also get liquid fuels on the ground.
-						obj/liquid_fuel/liquid = locate() in S
+					var/obj/liquid_fuel/liquid = locate() in S
 
 					firelevel = air_contents.calculate_firelevel(liquid)
 
@@ -109,12 +108,12 @@ obj
 								var/turf/simulated/enemy_tile = get_step(S, direction)
 
 
-								var
-									datum/gas_mixture/tair_contents = enemy_tile.return_air()
+								
+								var/datum/gas_mixture/tair_contents = enemy_tile.return_air()
 									//Get whatever trace fuels are in the area
-									datum/gas/volatile_fuel/tfuel = locate(/datum/gas/volatile_fuel/) in tair_contents.trace_gases
+								var/datum/gas/volatile_fuel/tfuel = locate(/datum/gas/volatile_fuel/) in tair_contents.trace_gases
 									//Also get liquid fuels on the ground.
-									obj/liquid_fuel/tliquid = locate() in enemy_tile
+								var/obj/liquid_fuel/tliquid = locate() in enemy_tile
 
 								if (tair_contents.oxygen < 0.5 || !(tair_contents.toxins || tfuel || tliquid))
 									//If there is nothing to ignite then skip it.
@@ -274,10 +273,9 @@ turf/simulated/apply_fire_protection()
 datum/gas_mixture/proc/zburn(obj/liquid_fuel/liquid)
 	//This proc is similar to fire(), but uses a simple logarithm to calculate temp, and is thus more stable with ZAS.
 	if(temperature > PLASMA_MINIMUM_BURN_TEMPERATURE)
-		var
-			total_fuel = toxins
-			fuel_sources = 0 //We'll divide by this later so that fuel is consumed evenly.
-			datum/gas/volatile_fuel/fuel = locate() in trace_gases
+		var/total_fuel = toxins
+		var/fuel_sources = 0 //We'll divide by this later so that fuel is consumed evenly.
+		var/datum/gas/volatile_fuel/fuel = locate() in trace_gases
 
 		if(fuel)
 		//Volatile Fuel
@@ -331,13 +329,11 @@ datum/gas_mixture/proc/zburn(obj/liquid_fuel/liquid)
 
 datum/gas_mixture/proc/calculate_firelevel(obj/liquid_fuel/liquid)
 		//Calculates the firelevel based on one equation instead of having to do this multiple times in different areas.
-	var
-		datum/gas/volatile_fuel/fuel = locate() in trace_gases
-		liquid_concentration = 0
-
-		oxy_concentration = oxygen*100 / volume
-		tox_concentration = toxins*40 / volume
-		fuel_concentration = 0
+	var/datum/gas/volatile_fuel/fuel = locate() in trace_gases
+	var/liquid_concentration = 0
+	var/oxy_concentration = oxygen*100 / volume
+	var/tox_concentration = toxins*40 / volume
+	var/fuel_concentration = 0
 
 	if(fuel) fuel_concentration = (fuel.moles*5) / volume
 	if(liquid) liquid_concentration = (liquid.amount*15) / volume
@@ -346,12 +342,11 @@ datum/gas_mixture/proc/calculate_firelevel(obj/liquid_fuel/liquid)
 /mob/living/carbon/human/proc/FireBurn(mx as num)
 	//Burns mobs due to fire. Respects heat transfer coefficients on various body parts.
 
-	var
-		head_exposure = 1
-		chest_exposure = 1
-		groin_exposure = 1
-		legs_exposure = 1
-		arms_exposure = 1
+	var/head_exposure = 1
+	var/chest_exposure = 1
+	var/groin_exposure = 1
+	var/legs_exposure = 1
+	var/arms_exposure = 1
 
 	//Get heat transfer coefficients for clothing.
 	for(var/obj/item/clothing/C in src)

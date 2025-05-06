@@ -94,44 +94,42 @@ zone/proc/process()
 
 proc/ShareRatio(datum/gas_mixture/A, datum/gas_mixture/B, ratio)
 	//Shares a specific ratio of gas between mixtures using simple weighted averages.
-	var
-		size = max(1,A.group_multiplier)
-		share_size = max(1,B.group_multiplier)
+	var/size = max(1,A.group_multiplier)
+	var/share_size = max(1,B.group_multiplier)
 
-		full_oxy = A.oxygen * size
-		full_nitro = A.nitrogen * size
-		full_co2 = A.carbon_dioxide * size
-		full_plasma = A.toxins * size
+	var/full_oxy = A.oxygen * size
+	var/full_nitro = A.nitrogen * size
+	var/full_co2 = A.carbon_dioxide * size
+	var/full_plasma = A.toxins * size
 
-		full_heat_capacity = A.heat_capacity() * size
+	var/full_heat_capacity = A.heat_capacity() * size
 
-		s_full_oxy = B.oxygen * share_size
-		s_full_nitro = B.nitrogen * share_size
-		s_full_co2 = B.carbon_dioxide * share_size
-		s_full_plasma = B.toxins * share_size
+	var/s_full_oxy = B.oxygen * share_size
+	var/s_full_nitro = B.nitrogen * share_size
+	var/s_full_co2 = B.carbon_dioxide * share_size
+	var/s_full_plasma = B.toxins * share_size
 
-		s_full_heat_capacity = B.heat_capacity() * share_size
+	var/s_full_heat_capacity = (B.heat_capacity() * share_size)
+		var/oxy_avg = (full_oxy + s_full_oxy) / (size + share_size)
+		var/nit_avg = (full_nitro + s_full_nitro) / (size + share_size)
+		var/co2_avg = (full_co2 + s_full_co2) / (size + share_size)
+		var/plasma_avg = (full_plasma + s_full_plasma) / (size + share_size)
 
-		oxy_avg = (full_oxy + s_full_oxy) / (size + share_size)
-		nit_avg = (full_nitro + s_full_nitro) / (size + share_size)
-		co2_avg = (full_co2 + s_full_co2) / (size + share_size)
-		plasma_avg = (full_plasma + s_full_plasma) / (size + share_size)
+		var/temp_avg = (A.temperature * full_heat_capacity + B.temperature * s_full_heat_capacity) / (full_heat_capacity + s_full_heat_capacity)
 
-		temp_avg = (A.temperature * full_heat_capacity + B.temperature * s_full_heat_capacity) / (full_heat_capacity + s_full_heat_capacity)
+	var/A.oxygen = (A.oxygen - oxy_avg) * (1-ratio) + oxy_avg
+	var/A.nitrogen = (A.nitrogen - nit_avg) * (1-ratio) + nit_avg
+	var/A.carbon_dioxide = (A.carbon_dioxide - co2_avg) * (1-ratio) + co2_avg
+	var/A.toxins = (A.toxins - plasma_avg) * (1-ratio) + plasma_avg
 
-	A.oxygen = (A.oxygen - oxy_avg) * (1-ratio) + oxy_avg
-	A.nitrogen = (A.nitrogen - nit_avg) * (1-ratio) + nit_avg
-	A.carbon_dioxide = (A.carbon_dioxide - co2_avg) * (1-ratio) + co2_avg
-	A.toxins = (A.toxins - plasma_avg) * (1-ratio) + plasma_avg
+	var/A.temperature = (A.temperature - temp_avg) * (1-ratio) + temp_avg
 
-	A.temperature = (A.temperature - temp_avg) * (1-ratio) + temp_avg
+	var/B.oxygen = (B.oxygen - oxy_avg) * (1-ratio) + oxy_avg
+	var/B.nitrogen = (B.nitrogen - nit_avg) * (1-ratio) + nit_avg
+	var/B.carbon_dioxide = (B.carbon_dioxide - co2_avg) * (1-ratio) + co2_avg
+	var/B.toxins = (B.toxins - plasma_avg) * (1-ratio) + plasma_avg
 
-	B.oxygen = (B.oxygen - oxy_avg) * (1-ratio) + oxy_avg
-	B.nitrogen = (B.nitrogen - nit_avg) * (1-ratio) + nit_avg
-	B.carbon_dioxide = (B.carbon_dioxide - co2_avg) * (1-ratio) + co2_avg
-	B.toxins = (B.toxins - plasma_avg) * (1-ratio) + plasma_avg
-
-	B.temperature = (B.temperature - temp_avg) * (1-ratio) + temp_avg
+	var/B.temperature = (B.temperature - temp_avg) * (1-ratio) + temp_avg
 
 	for(var/datum/gas/G in A.trace_gases)
 		var/datum/gas/H = locate(G.type) in B.trace_gases
@@ -154,9 +152,9 @@ proc/ShareRatio(datum/gas_mixture/A, datum/gas_mixture/B, ratio)
 
 proc/ShareSpace(datum/gas_mixture/A, ratio)
 	//A modified version of ShareRatio for spacing gas at the same rate as if it were going into a large airless room.
-	var
-		size = max(1,A.group_multiplier)
-		share_size = max(1,A.group_multiplier)
+	
+	var/size = max(1,A.group_multiplier)
+	var/share_size = max(1,A.group_multiplier)
 
 		full_oxy = A.oxygen * size
 		full_nitro = A.nitrogen * size
@@ -195,10 +193,9 @@ proc/ShareSpace(datum/gas_mixture/A, ratio)
 
 zone/proc/Rebuild()
 	//Choose a random turf and regenerate the zone from it.
-	var
-		turf/simulated/sample = pick(contents)
-		list/new_contents
-		problem = 0
+	var/turf/simulated/sample = pick(contents)
+	var/list/new_contents
+	var/problem = 0
 
 	var/list/turfs_to_consider = contents.Copy()
 	do

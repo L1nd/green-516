@@ -48,11 +48,11 @@ zone
 proc/FloodFill(turf/start)
 	if(!istype(start))
 		return list()
-	var
-		list
-			open = list(start)
-			closed = list()
-			doors = list()
+	
+	
+	var/list/open = list(start)
+	var/list/closed = list()
+	var/list/doors = list()
 
 	while(open.len)
 		for(var/turf/T in open)

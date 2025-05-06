@@ -28,30 +28,30 @@
 			M << 'sound/effects/mousesqueek.ogg'
 
 /mob/living/simple_animal/mouse/gray
-	color = "gray"
+	color_ = "gray"
 	icon_state = "mouse_gray"
 
 /mob/living/simple_animal/mouse/white
-	color = "white"
+	color_ = "white"
 	icon_state = "mouse_white"
 
 /mob/living/simple_animal/mouse/brown
-	color = "brown"
+	color_ = "brown"
 	icon_state = "mouse_brown"
 
 /mob/living/simple_animal/mouse/New()
-	if(!color)
-		color = pick( list("brown","gray","white") )
-	icon_state = "mouse_[color]"
-	icon_living = "mouse_[color]"
-	icon_dead = "mouse_[color]_dead"
-	desc = "It's a small [color] rodent, often seen hiding in maintenance areas."
+	if(!color_)
+		color_ = pick( list("brown","gray","white") )
+	icon_state = "mouse_[color_]"
+	icon_living = "mouse_[color_]"
+	icon_dead = "mouse_[color_]_dead"
+	desc = "It's a small [color_] rodent, often seen hiding in maintenance areas."
 
 /mob/living/simple_animal/mouse/proc/splat()
 	src.health = 0
 	src.stat = DEAD
-	src.icon_dead = "mouse_[color]_splat"
-	src.icon_state = "mouse_[color]_splat"
+	src.icon_dead = "mouse_[color_]_splat"
+	src.icon_state = "mouse_[color_]_splat"
 
 /proc/ismouse(var/obj/O)
 	return istype(O,/mob/living/simple_animal/mouse)
