@@ -14,7 +14,7 @@
 	//blinded get reset each cycle and then get activated later in the
 	//code. Very ugly. I dont care. Moving this stuff here so its easy
 	//to find it.
-		blinded = null
+		blinded = 0
 
 	//Disease Check
 		handle_virus_updates()

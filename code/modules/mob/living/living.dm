@@ -137,7 +137,7 @@
 	var/list/L = src.get_contents()
 	for(var/obj/O in L)
 		O.emp_act(severity)
-	..()
+	return()
 
 /mob/living/proc/get_organ_target()
 	var/mob/shooter = src
@@ -231,14 +231,13 @@
 			H.UpdateDamageIcon()
 		if (src.stat > 1)
 			src.stat=0
-		..()
+		return()
 	src.heal_overall_damage(1000, 1000)
 	src.buckled = initial(src.buckled)
 	src.handcuffed = initial(src.handcuffed)
 	if(src.stat > 1)
 		src.stat = CONSCIOUS
-	..()
-	return
+	return()
 
 /mob/living/proc/reveve()
 	if(istype(src, /mob/living/carbon/human))
@@ -299,14 +298,13 @@
 			H.UpdateDamageIcon()
 		if (src.stat > 1)
 			src.stat=0
-		..()
+		return()
 	src.heal_overall_damage(1000, 1000)
 	src.buckled = initial(src.buckled)
 	src.handcuffed = initial(src.handcuffed)
 	if(src.stat > 1)
 		src.stat = CONSCIOUS
-	..()
-	return
+	return()
 
 /mob/living/proc/UpdateDamageIcon()
 		return
