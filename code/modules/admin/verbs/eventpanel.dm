@@ -140,7 +140,7 @@
 				H.name = tname
 				H.morph_stage = 2
 				if(alert("Spawn jumpsuit",,"Yes","No")=="Yes")
-					H.w_uniform = new/obj/item/clothing/under/color/grey(H)
+					H.w_uniform = new/obj/item/clothing/under/color_/grey(H)
 					H.shoes = new/obj/item/clothing/shoes/black(H)
 				spawn(5)
 					H.key = tkey
@@ -161,7 +161,7 @@
 				H.name = tname
 				H.morph_stage = 2
 				if(alert("Spawn jumpsuit",,"Yes","No")=="Yes")
-					H.w_uniform = new/obj/item/clothing/under/color/grey(H)
+					H.w_uniform = new/obj/item/clothing/under/color_/grey(H)
 					H.shoes = new/obj/item/clothing/shoes/black(H)
 				//message_admins("\blue [key_name_admin(usr)] spawn [key_name_admin(H)] like a zombie.", 1)
 				spawn(5)
