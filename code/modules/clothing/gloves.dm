@@ -39,32 +39,32 @@
 	desc = "These look pretty fancy."
 	icon_state = "latex"
 	item_state = "lgloves"
-	color="mime"
+	color_="mime"
 
 	redcoat
-		color = "redcoat"		//Exists for washing machines. Is not different from white gloves in any way.
+		color_ = "redcoat"		//Exists for washing machines. Is not different from white gloves in any way.
 
 /obj/item/clothing/gloves/black
 	desc = "These gloves are fire-resistant."
 	name = "black gloves"
 	icon_state = "black"
 	item_state = "bgloves"
-	color="brown"
+	color_="brown"
 	protective_temperature = 1500
 	heat_transfer_coefficient = 0.01
 
 	hos
-		color = "hosred"		//Exists for washing machines. Is not different from black gloves in any way.
+		color_ = "hosred"		//Exists for washing machines. Is not different from black gloves in any way.
 
 	ce
-		color = "chief"			//Exists for washing machines. Is not different from black gloves in any way.
+		color_ = "chief"			//Exists for washing machines. Is not different from black gloves in any way.
 
 /obj/item/clothing/gloves/detective
 	desc = "Made of well worn leather. These gloves are comfortable, useful, and stylish!"
 	name = "detective's gloves"
 	icon_state = "black"
 	item_state = "bgloves"
-	color="brown"
+	color_="brown"
 	siemens_coefficient = 0.30
 	protective_temperature = 1100
 
@@ -73,7 +73,7 @@
 	name = "head of security's gloves"
 	icon_state = "black"
 	item_state = "bgloves"
-	color="brown"
+	color_="brown"
 	siemens_coefficient = 0.30
 	protective_temperature = 1100
 
@@ -93,10 +93,10 @@
 	permeability_coefficient = 0.01
 	protective_temperature = 310
 	heat_transfer_coefficient = 0.90
-	color="white"
+	color_="white"
 
 	cmo
-		color = "medical"		//Exists for washing machines. Is not different from latex gloves in any way.
+		color_ = "medical"		//Exists for washing machines. Is not different from latex gloves in any way.
 
 /obj/item/clothing/gloves/swat
 	desc = "These tactical gloves are somewhat fire and impact-resistant."
@@ -152,7 +152,7 @@
 	permeability_coefficient = 0.05
 	protective_temperature = 1000
 	heat_transfer_coefficient = 0.01
-	color="yellow"
+	color_="yellow"
 
 /obj/item/clothing/gloves/fyellow                             //Cheap Chinese Crap
 	desc = "These gloves are cheap copies of the coveted gloves, no way this can end badly."
@@ -163,7 +163,7 @@
 	permeability_coefficient = 0.05
 	protective_temperature = 800
 	heat_transfer_coefficient = null
-	color="yellow"
+	color_="yellow"
 
 	New()
 		siemens_coefficient = pick(0,0,0.25,0.5,0.5,0.75,1.5)
@@ -174,7 +174,7 @@
 	name = "captain's gloves"
 	icon_state = "captain"
 	item_state = "egloves"
-	color = "captain"
+	color_ = "captain"
 
 /obj/item/clothing/gloves/botanic_leather
 	desc = "These leather gloves protect against thorns, barbs, prickles, spikes and other harmful objects of floral origin."
@@ -188,14 +188,14 @@
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "orange"
 	item_state = "orangegloves"
-	color="orange"
+	color_="orange"
 
 /obj/item/clothing/gloves/red
 	name = "red gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "red"
 	item_state = "redgloves"
-	color = "red"
+	color_ = "red"
 	siemens_coefficient = 0.30
 	protective_temperature = 1100
 
@@ -204,61 +204,61 @@
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "rainbow"
 	item_state = "rainbowgloves"
-	color = "rainbow"
+	color_ = "rainbow"
 
 	clown
-		color = "clown"
+		color_ = "clown"
 
 /obj/item/clothing/gloves/blue
 	name = "blue gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "blue"
 	item_state = "bluegloves"
-	color="blue"
+	color_="blue"
 
 /obj/item/clothing/gloves/purple
 	name = "purple gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "purple"
 	item_state = "purplegloves"
-	color="purple"
+	color_="purple"
 
 /obj/item/clothing/gloves/green
 	name = "green gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "green"
 	item_state = "greengloves"
-	color="green"
+	color_="green"
 
 /obj/item/clothing/gloves/grey
 	name = "grey gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "gray"
 	item_state = "graygloves"
-	color="grey"
+	color_="grey"
 
 	rd
-		color = "director"			//Exists for washing machines. Is not different from gray gloves in any way.
+		color_ = "director"			//Exists for washing machines. Is not different from gray gloves in any way.
 
 	hop
-		color = "hop"				//Exists for washing machines. Is not different from gray gloves in any way.
+		color_ = "hop"				//Exists for washing machines. Is not different from gray gloves in any way.
 
 /obj/item/clothing/gloves/light_brown
 	name = "light brown gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "lightbrown"
 	item_state = "lightbrowngloves"
-	color="light brown"
+	color_="light brown"
 
 /obj/item/clothing/gloves/brown
 	name = "brown gloves"
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "brown"
 	item_state = "browngloves"
-	color="brown"
+	color_="brown"
 
 	cargo
-		color = "cargo"				//Exists for washing machines. Is not different from brown gloves in any way.
+		color_ = "cargo"				//Exists for washing machines. Is not different from brown gloves in any way.
 
 //Fingerless gloves
 
@@ -273,7 +273,7 @@
 	desc = "A pair of black gloves. They don't seem to have fingers."
 	icon_state = "fingerless_black"
 	item_state = "fingerless_black"
-	color="black"
+	color_="black"
 
 /obj/item/clothing/gloves/batman_gloves
 	name = "batman gloves"

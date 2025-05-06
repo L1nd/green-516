@@ -7,25 +7,25 @@
 	allowed = list(/obj/item/device/flashlight)
 	var/brightness_on = 4 //luminosity when on
 	var/on = 0
-	color = "engineering" //Determines used sprites: rig[on]-[color] and rig[on]-[color]2 (lying down sprite)
+	color_ = "engineering" //Determines used sprites: rig[on]-[color] and rig[on]-[color_]2 (lying down sprite)
 
 /obj/item/clothing/head/helmet/space/rig/mining
 	name = "mining hardsuit helmet"
 	icon_state = "rig0-mining"
 	item_state = "rig0-mining"
-	color = "mining"
+	color_ = "mining"
 
 
 /obj/item/clothing/head/helmet/space/rig/elite
 	name = "advanced hardsuit helmet"
 	icon_state = "rig0-white"
 	item_state = "rig0-white"
-	color = "white"
+	color_ = "white"
 
 /obj/item/clothing/head/helmet/space/rig/security
 	name = "security hardsuit helmet"
 	icon_state = "rig0-security"
-	color = "security"
+	color_ = "security"
 	armor = list(melee = 60, bullet = 10, laser = 30, energy = 5, bomb = 45, bio = 100, rad = 10)
 
 /obj/item/clothing/suit/space/rig

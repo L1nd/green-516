@@ -612,7 +612,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 			return 1
 	return 0
 
-/proc/sign(x) //Should get bonus points for being the most compact code in the world!
+/proc/sign_(x) //Should get bonus points for being the most compact code in the world!
 	return x!=0?x/abs(x):0 //((x<0)?-1:((x>0)?1:0))
 
 /*	//Kelson's version (doesn't work)
@@ -1131,9 +1131,9 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /proc/between(var/low, var/middle, var/high)
 	return max(min(middle, high), low)
 
-proc/arctan(x)
-	var/y=arcsin(x/sqrt(1+x*x))
-	return y
+// proc/arctan(x)
+// 	var/y=arcsin(x/sqrt(1+x*x))
+// 	return y
 
 //returns random gauss number
 proc/GaussRand(var/sigma)
@@ -1175,11 +1175,6 @@ proc/listgetindex(var/list/list,index)
 		else if(index in list)
 			return list[index]
 	return
-
-proc/islist(list/list)
-	if(istype(list))
-		return 1
-	return 0
 
 proc/isemptylist(list/list)
 	if(!list.len)

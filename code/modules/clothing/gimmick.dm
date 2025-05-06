@@ -28,13 +28,13 @@
 	name = "red shoes"
 	desc = "Stylish red shoes."
 	icon_state = "red"
-	color = "red"
+	color_ = "red"
 
 /obj/item/clothing/shoes/rainbow
 	name = "rainbow shoes"
 	desc = "Very gay shoes."
 	icon_state = "rain_bow"
-	color = "rainbow"
+	color_ = "rainbow"
 
 /obj/item/clothing/mask/owl_mask
 	name = "owl mask"
@@ -45,7 +45,7 @@
 	name = "owl uniform"
 	desc = "A jumpsuit with owl wings. Photorealistic owl feathers! Twooooo!"
 	icon_state = "owl"
-	color = "owl"
+	color_ = "owl"
 
 /obj/item/clothing/gloves/cyborg
 	desc = "Beep boop borp."
@@ -77,7 +77,7 @@
 	name = "Nazi uniform"
 	desc = "SIEG HEIL!"
 	icon_state = "nazi"
-	color = "nazi1"*/ //no direction sprites
+	color_ = "nazi1"*/ //no direction sprites
 
 /obj/item/clothing/suit/greatcoat
 	name = "great coat"
@@ -90,7 +90,7 @@
 	name = "johnny~~ jumpsuit"
 	desc = "Johnny~~"
 	icon_state = "johnny"
-	color = "johnny"
+	color_ = "johnny"
 
 /obj/item/clothing/suit/johnny_coat
 	name = "johnny~~ coat"
@@ -124,19 +124,19 @@
 	desc = "rainbow"
 	icon_state = "rainbow"
 	item_state = "rainbow"
-	color = "rainbow"
+	color_ = "rainbow"
 
 /obj/item/clothing/under/cloud
 	name = "cloud"
 	desc = "cloud"
 	icon_state = "cloud"
-	color = "cloud"
+	color_ = "cloud"
 
 /*/obj/item/clothing/under/yay
 	name = "yay"
 	desc = "Yay!"
 	icon_state = "yay"
-	color = "yay"*/ // no sprite --errorage
+	color_ = "yay"*/ // no sprite --errorage
 
 // UNUSED COLORS
 
@@ -144,87 +144,87 @@
 	name = "psychedelic"
 	desc = "Groovy!"
 	icon_state = "psyche"
-	color = "psyche"
+	color_ = "psyche"
 
 /*
 /obj/item/clothing/under/maroon
 	name = "maroon"
 	desc = "maroon"
 	icon_state = "maroon"
-	color = "maroon"*/ // no sprite -- errorage
+	color_ = "maroon"*/ // no sprite -- errorage
 
 /obj/item/clothing/under/lightblue
 	name = "lightblue"
 	desc = "lightblue"
 	icon_state = "lightblue"
-	color = "lightblue"
+	color_ = "lightblue"
 
 /obj/item/clothing/under/aqua
 	name = "aqua"
 	desc = "aqua"
 	icon_state = "aqua"
-	color = "aqua"
+	color_ = "aqua"
 
 /obj/item/clothing/under/purple
 	name = "purple"
 	desc = "purple"
 	icon_state = "purple"
 	item_state = "p_suit"
-	color = "purple"
+	color_ = "purple"
 
 /obj/item/clothing/under/lightpurple
 	name = "lightpurple"
 	desc = "lightpurple"
 	icon_state = "lightpurple"
-	color = "lightpurple"
+	color_ = "lightpurple"
 
 /obj/item/clothing/under/lightgreen
 	name = "lightgreen"
 	desc = "lightgreen"
 	icon_state = "lightgreen"
-	color = "lightgreen"
+	color_ = "lightgreen"
 
 /obj/item/clothing/under/lightblue
 	name = "lightblue"
 	desc = "lightblue"
 	icon_state = "lightblue"
-	color = "lightblue"
+	color_ = "lightblue"
 
 /obj/item/clothing/under/lightbrown
 	name = "lightbrown"
 	desc = "lightbrown"
 	icon_state = "lightbrown"
-	color = "lightbrown"
+	color_ = "lightbrown"
 
 /obj/item/clothing/under/brown
 	name = "brown"
 	desc = "brown"
 	icon_state = "brown"
-	color = "brown"
+	color_ = "brown"
 
 /obj/item/clothing/under/yellowgreen
 	name = "yellowgreen"
 	desc = "yellowgreen"
 	icon_state = "yellowgreen"
-	color = "yellowgreen"
+	color_ = "yellowgreen"
 
 /obj/item/clothing/under/darkblue
 	name = "darkblue"
 	desc = "darkblue"
 	icon_state = "darkblue"
-	color = "darkblue"
+	color_ = "darkblue"
 
 /obj/item/clothing/under/lightred
 	name = "lightred"
 	desc = "lightred"
 	icon_state = "lightred"
-	color = "lightred"
+	color_ = "lightred"
 
 /obj/item/clothing/under/darkred
 	name = "darkred"
 	desc = "darkred"
 	icon_state = "darkred"
-	color = "darkred"
+	color_ = "darkred"
 
 // STEAMPUNK STATION
 
@@ -239,41 +239,41 @@
 	desc = "A green suit and yellow necktie. Exemplifies authority."
 	icon_state = "green_suit"
 	item_state = "dg_suit"
-	color = "green_suit"
+	color_ = "green_suit"
 
 /obj/item/clothing/under/gimmick/rank/head_of_personnel/suit
 	name = "head of personnel's suit"
 	desc = "A teal suit and yellow necktie. An authoritative yet tacky ensemble."
 	icon_state = "teal_suit"
 	item_state = "g_suit"
-	color = "teal_suit"
+	color_ = "teal_suit"
 
 /obj/item/clothing/under/suit_jacket
 	name = "black suit"
 	desc = "A black suit and red tie. Very formal."
 	icon_state = "black_suit"
 	item_state = "bl_suit"
-	color = "black_suit"
+	color_ = "black_suit"
 
 /obj/item/clothing/under/suit_jacket/really_black
 	name = "executive suit"
 	desc = "A formal black suit and red tie, intended for the station's finest."
 	icon_state = "really_black_suit"
 	item_state = "bl_suit"
-	color = "black_suit"
+	color_ = "black_suit"
 
 /obj/item/clothing/under/suit_jacket/red
 	name = "red suit"
 	desc = "A red suit and blue tie. Somewhat formal."
 	icon_state = "red_suit"
 	item_state = "r_suit"
-	color = "red_suit"
+	color_ = "red_suit"
 
 /obj/item/clothing/under/blackskirt
 	name = "black skirt"
 	desc = "A black skirt, very fancy!"
 	icon_state = "blackskirt"
-	color = "blackskirt"
+	color_ = "blackskirt"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/under/schoolgirl
@@ -281,7 +281,7 @@
 	desc = "It's just like one of my Japanese animes!"
 	icon_state = "schoolgirl"
 	item_state = "schoolgirl"
-	color = "schoolgirl"
+	color_ = "schoolgirl"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 /*
 /obj/item/clothing/under/gimmick/rank/police
@@ -289,7 +289,7 @@
 	desc = "Move along, nothing to see here."
 	icon_state = "police"
 	item_state = "b_suit"
-	color = "police"	*/	//No Sprite - Shiftyeyesshady
+	color_ = "police"	*/	//No Sprite - Shiftyeyesshady
 
 /obj/item/clothing/head/flatcap
 	name = "flat cap"
@@ -302,7 +302,7 @@
 	desc = "A set of durable overalls for getting the job done."
 	icon_state = "overalls"
 	item_state = "lb_suit"
-	color = "overalls"
+	color_ = "overalls"
 
 /obj/item/weapon/melee/classic_baton
 	name = "police baton"
@@ -319,7 +319,7 @@
 	desc = "Yarr."
 	icon_state = "pirate"
 	item_state = "pirate"
-	color = "pirate"
+	color_ = "pirate"
 
 /obj/item/clothing/head/pirate
 	name = "pirate hat"
@@ -366,14 +366,14 @@
 	desc = "For the Motherland!"
 	icon_state = "soviet"
 	item_state = "soviet"
-	color = "soviet"
+	color_ = "soviet"
 
 /obj/item/clothing/under/redcoat
 	name = "redcoat uniform"
 	desc = "Looks old."
 	icon_state = "redcoat"
 	item_state = "redcoat"
-	color = "redcoat"
+	color_ = "redcoat"
 
 /obj/item/clothing/head/ushanka
 	name = "ushanka"
@@ -508,14 +508,14 @@
 	desc = "Worn by Italian plumbers everywhere.  Probably."
 	icon_state = "mario"
 	item_state = "mario"
-	color = "mario"
+	color_ = "mario"
 
 /obj/item/clothing/under/luigi
 	name = "Mario costume"
 	desc = "Player two.  Couldn't you get the first controller?"
 	icon_state = "luigi"
 	item_state = "luigi"
-	color = "luigi"
+	color_ = "luigi"
 */
 
 /obj/item/clothing/under/kilt
@@ -523,7 +523,7 @@
 	desc = "Includes shoes and plaid."
 	icon_state = "kilt"
 	item_state = "kilt"
-	color = "kilt"
+	color_ = "kilt"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|FEET
 
 /obj/item/clothing/under/sexymime
@@ -531,7 +531,7 @@
 	desc = "The only time when you DON'T enjoy looking at someone's rack."
 	icon_state = "sexymime"
 	item_state = "sexymime"
-	color = "sexymime"
+	color_ = "sexymime"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/karlson
@@ -539,84 +539,84 @@
 	desc = "what a funny man."
 	icon_state = "karlson"
 	item_state = "karlson"
-	color = "karlson"
+	color_ = "karlson"
 
 /obj/item/clothing/under/internalsecurity
 	name = "Security elite jumpsuit"
 	desc = "Best of the best."
 	icon_state = "internalsecurity"
 	item_state = "internalsecurity"
-	color = "internalsecurity"
+	color_ = "internalsecurity"
 
 /obj/item/clothing/under/commissar
 	name = "Security elite commissar jumpsuit"
 	desc = "Best of the best."
 	icon_state = "commissar"
 	item_state = "commissar"
-	color = "commissar"
+	color_ = "commissar"
 
 /obj/item/clothing/under/secelite2
 	name = "Security elite jumpsuit"
 	desc = "Best of the best."
 	icon_state = "secelite2"
 	item_state = "secelite2"
-	color = "secelite2"
+	color_ = "secelite2"
 
 /obj/item/clothing/under/secelite3
 	name = "Security elite jumpsuit"
 	desc = "Best of the best."
 	icon_state = "secelite3"
 	item_state = "secelite3"
-	color = "secelite3"
+	color_ = "secelite3"
 
 /obj/item/clothing/under/bluedress
 	name = "bluedress"
 	desc = "."
 	icon_state = "bluedress"
 	item_state = "bluedress"
-	color = "bluedress"
+	color_ = "bluedress"
 
 /obj/item/clothing/under/smoking
 	name = "smoking"
 	desc = "For serious man."
 	icon_state = "smoking"
 	item_state = "smoking"
-	color = "smoking"
+	color_ = "smoking"
 
 /obj/item/clothing/under/jokervest
 	name = "green vest"
 	desc = "For not sirious man."
 	icon_state = "jokervest"
 	item_state = "jokervest"
-	color = "jokervest"
+	color_ = "jokervest"
 
 /obj/item/clothing/under/whitedress
 	name = "whitedress"
 	desc = "."
 	icon_state = "whitedress"
 	item_state = "whitedress"
-	color = "whitedress"
+	color_ = "whitedress"
 
 /obj/item/clothing/under/miniskirt
 	name = "miniskirt"
 	desc = "for cuttiest girl."
 	icon_state = "miniskirt"
 	item_state = "miniskirt"
-	color = "miniskirt"
+	color_ = "miniskirt"
 
 /obj/item/clothing/under/black_shirtf
 	name = "black shirtf"
 	desc = "."
 	icon_state = "black_shirtf"
 	item_state = "black_shirtf"
-	color = "black_shirtf"
+	color_ = "black_shirtf"
 
 /obj/item/clothing/under/rosh
 	name = "rosh"
 	desc = "."
 	icon_state = "rosh"
 	item_state = "rosh"
-	color = "rosh"
+	color_ = "rosh"
 
 /obj/item/clothing/head/bowler
 	name = "bowler hat"
@@ -661,7 +661,7 @@
 	desc = "Are you not entertained? Is that not why you are here?"
 	icon_state = "gladiator"
 	item_state = "gladiator"
-	color = "gladiator"
+	color_ = "gladiator"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/head/helmet/gladiator
@@ -777,7 +777,7 @@
 	desc = "Stylish black leather."
 	icon_state = "laceups"
 	item_state = "laceups"
-	color = "black"
+	color_ = "black"
 
 //suits
 
@@ -814,5 +814,5 @@
 	desc = "Oldschool and silly suit."
 	icon_state = "karlson"
 	item_state = "karlson"
-	color = "karlson"
+	color_ = "karlson"
 

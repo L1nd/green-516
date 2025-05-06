@@ -11,19 +11,19 @@
 /obj/item/clothing/under/lawyer/black
 	icon_state = "lawyer_black"
 	item_state = "lawyer_black"
-	color = "lawyer_black"
+	color_ = "lawyer_black"
 
 
 /obj/item/clothing/under/lawyer/red
 	icon_state = "lawyer_red"
 	item_state = "lawyer_red"
-	color = "lawyer_red"
+	color_ = "lawyer_red"
 
 
 /obj/item/clothing/under/lawyer/blue
 	icon_state = "lawyer_blue"
 	item_state = "lawyer_blue"
-	color = "lawyer_blue"
+	color_ = "lawyer_blue"
 
 
 /obj/item/clothing/under/lawyer/bluesuit
@@ -31,7 +31,7 @@
 	desc = "A classy suit and tie."
 	icon_state = "bluesuit"
 	item_state = "bluesuit"
-	color = "bluesuit"
+	color_ = "bluesuit"
 
 /obj/item/clothing/suit/lawyer/bluejacket
 	name = "blue suit jacket"
@@ -45,7 +45,7 @@
 	name = "purple suit"
 	icon_state = "lawyer_purp"
 	item_state = "lawyer_purp"
-	color = "lawyer_purp"
+	color_ = "lawyer_purp"
 
 /obj/item/clothing/suit/lawyer/purpjacket
 	name = "purple suit jacket"

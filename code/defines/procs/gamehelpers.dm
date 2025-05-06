@@ -298,13 +298,12 @@ proc/is_carrying(var/M as mob, var/O as obj)
 
 	//hackcopy from a ZAS function, first created for use with intertial_damper/new shielding
 proc/CircleFloodFill(turf/start, var/radius = 3)
+	var/list/open = list(start)
+	var/list/closed = list()
+	var/list/possibles = circlerange(start,radius)
 	if(!istype(start))
 		return list()
-	var
-		list
-			open = list(start)
-			closed = list()
-			possibles = circlerange(start,radius)
+		
 
 	while(open.len)
 		for(var/turf/T in open)
@@ -325,13 +324,12 @@ proc/CircleFloodFill(turf/start, var/radius = 3)
 //floods in a square area, flowing around any shielding but including all other turf types
 //created initially for explosion / shield interaction
 proc/ExplosionFloodFill(turf/start, var/radius = 3)
+	var/list/open = list(start)
+	var/list/closed = list()
+	var/list/possibles = range(start,radius)
 	if(!istype(start))
 		return list()
-	var
-		list
-			open = list(start)
-			closed = list()
-			possibles = range(start,radius)
+	
 
 	while(open.len)
 		for(var/turf/T in open)
@@ -387,13 +385,12 @@ proc/ExplosionFloodFill(turf/start, var/radius = 3)
 //floods in a circular area, flowing around any shielding but including all other turf types
 //created initially for explosion / shield interaction
 proc/ExplosionCircleFloodFill(turf/start, var/radius = 3)
+	var/list/open = list(start)
+	var/list/closed = list()
+	var/list/possibles = range(start,radius)
+
 	if(!istype(start))
 		return list()
-	var
-		list
-			open = list(start)
-			closed = list()
-			possibles = circlerange(start,radius)
 
 	while(open.len)
 		for(var/turf/T in open)

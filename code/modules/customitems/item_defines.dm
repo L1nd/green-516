@@ -179,7 +179,7 @@
 	icon = 'custom_items.dmi'
 	icon_state = "walter_brooks_1"
 	item_state = "bluegloves"
-	color="blue"
+	color_="blue"
 
 //////////// Eye Wear ////////////
 
@@ -203,7 +203,7 @@
 	desc = "An old dented hard hat with the nametag \"Anderson\". It seems to be backwards."
 	icon_state = "hardhat0_dblue" //Already an in-game sprite
 	item_state = "hardhat0_dblue"
-	color = "dblue"
+	color_ = "dblue"
 */
 
 /obj/item/clothing/head/secsoft/fluff/swatcap //deusdactyl: James Girard
@@ -251,7 +251,7 @@
 	icon = 'custom_items.dmi'
 	icon_state = "graycoat"
 	item_state = "graycoat"
-	color = "graycoat"
+	color_ = "graycoat"
 
 /obj/item/clothing/suit/storage/det_suit/fluff/leatherjack //atomicdog92: Seth Sealis
 	name = "leather jacket"
@@ -259,7 +259,7 @@
 	icon = 'custom_items.dmi'
 	icon_state = "leatherjack"
 	item_state = "leatherjack"
-	color = "leatherjack"
+	color_ = "leatherjack"
 
 //////////// Uniforms ////////////
 
@@ -269,7 +269,7 @@
 	icon = 'custom_items.dmi'
 	icon_state = "jumpsuitdown"
 	item_state = "jumpsuitdown"
-	color = "jumpsuitdown"
+	color_ = "jumpsuitdown"
 
 /obj/item/clothing/under/fluff/olddressuniform //desiderium: Momiji Inubashiri
 	name = "retired dress uniform"
@@ -277,14 +277,14 @@
 	icon = 'custom_items.dmi'
 	icon_state = "olddressuniform"
 	item_state = "olddressuniform"
-	color = "olddressuniform"
+	color_ = "olddressuniform"
 
 /obj/item/clothing/under/rank/security/fluff/jeremy_wolf_1 //whitewolf41: Jeremy Wolf
 	name = "worn officer's uniform"
 	desc = "An old red security jumpsuit. Seems to have some slight modifications."
 	icon = 'custom_items.dmi'
 	icon_state = "jeremy_wolf_1"
-	color = "jeremy_wolf_1"
+	color_ = "jeremy_wolf_1"
 
 //////////// Masks ////////////
 
@@ -325,7 +325,7 @@
 	desc = "A modified standard-issue CDC jumpsuit made of a special fiber that gives special protection against biohazards.  It has a biohazard symbol sewn into the back."
 	icon = 'custom_items.dmi'
 	icon_state = "cdc_jumpsuit"
-	color = "cdc_jumpsuit"
+	color_ = "cdc_jumpsuit"
 
 /obj/item/clothing/suit/storage/labcoat/fluff/cdc_labcoat
 	name = "\improper CDC labcoat"
@@ -340,7 +340,7 @@
 	desc = "Made of a special fiber that gives special protection against biohazards. Has a cross on the chest denoting that the wearer is trained medical personnel and short sleeves."
 	icon = 'custom_items.dmi'
 	icon_state = "medical_short"
-	color = "medical_short"
+	color_ = "medical_short"
 
 /obj/item/clothing/suit/storage/labcoat/fluff/red
 	name = "red labcoat"
@@ -356,7 +356,7 @@
 	icon = 'custom_items.dmi'
 	icon_state = "retpolcoat"
 	item_state = "retpolcoat"
-	color = "retpolcoat"
+	color_ = "retpolcoat"
 
 /obj/item/clothing/head/det_hat/fluff/retpolcap
 	name = "retired colony patrolman's cap"
@@ -369,4 +369,4 @@
 	desc = "A meticulously clean police uniform belonging to Precinct 31, Outer Light Colony. The word \"RETIRED\" is engraved tastefully and professionally in the badge below the number, 501."
 	icon = 'custom_items.dmi'
 	icon_state = "retpoluniform"
-	color = "retpoluniform"
+	color_ = "retpoluniform"

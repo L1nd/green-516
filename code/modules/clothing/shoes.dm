@@ -29,66 +29,66 @@
 /obj/item/clothing/shoes/black
 	name = "black shoes"
 	icon_state = "black"
-	color = "black"
+	color_ = "black"
 	desc = "A pair of black shoes."
 
 	redcoat
-		color = "redcoat"	//Exists for washing machines. Is not different from black shoes in any way.
+		color_ = "redcoat"	//Exists for washing machines. Is not different from black shoes in any way.
 
 /obj/item/clothing/shoes/brown
 	name = "brown shoes"
 	desc = "A pair of brown shoes."
 	icon_state = "brown"
-	color = "brown"
+	color_ = "brown"
 
 	captain
-		color = "captain"	//Exists for washing machines. Is not different from brown shoes in any way.
+		color_ = "captain"	//Exists for washing machines. Is not different from brown shoes in any way.
 	hop
-		color = "hop"		//Exists for washing machines. Is not different from brown shoes in any way.
+		color_ = "hop"		//Exists for washing machines. Is not different from brown shoes in any way.
 	ce
-		color = "chief"		//Exists for washing machines. Is not different from brown shoes in any way.
+		color_ = "chief"		//Exists for washing machines. Is not different from brown shoes in any way.
 	rd
-		color = "director"	//Exists for washing machines. Is not different from brown shoes in any way.
+		color_ = "director"	//Exists for washing machines. Is not different from brown shoes in any way.
 	cmo
-		color = "medical"	//Exists for washing machines. Is not different from brown shoes in any way.
+		color_ = "medical"	//Exists for washing machines. Is not different from brown shoes in any way.
 	cmo
-		color = "cargo"		//Exists for washing machines. Is not different from brown shoes in any way.
+		color_ = "cargo"		//Exists for washing machines. Is not different from brown shoes in any way.
 
 /obj/item/clothing/shoes/blue
 	name = "blue shoes"
 	icon_state = "blue"
-	color = "blue"
+	color_ = "blue"
 
 /obj/item/clothing/shoes/green
 	name = "green shoes"
 	icon_state = "green"
-	color = "green"
+	color_ = "green"
 
 /obj/item/clothing/shoes/yellow
 	name = "yellow shoes"
 	icon_state = "yellow"
-	color = "yellow"
+	color_ = "yellow"
 
 /obj/item/clothing/shoes/mime
 	name = "mime shoes"
 	icon_state = "mime"
-	color = "mime"
+	color_ = "mime"
 
 /obj/item/clothing/shoes/purple
 	name = "purple shoes"
 	icon_state = "purple"
-	color = "purple"
+	color_ = "purple"
 
 /obj/item/clothing/shoes/brown
 	name = "brown shoes"
 	icon_state = "brown"
-	color = "brown"
+	color_ = "brown"
 
 /obj/item/clothing/shoes/orange
 	name = "orange shoes"
 	icon_state = "orange"
 	var/chained = 0
-	color = "orange"
+	color_ = "orange"
 
 /obj/item/clothing/shoes/swat
 	name = "\improper SWAT shoes"
@@ -117,7 +117,7 @@
 	name = "white shoes"
 	icon_state = "white"
 	permeability_coefficient = 0.25
-	color = "white"
+	color_ = "white"
 
 /obj/item/clothing/shoes/sandal
 	desc = "A pair of rather plain, wooden sandals."
@@ -152,14 +152,14 @@
 	icon_state = "clown"
 	item_state = "clown_shoes"
 	slowdown = SHOES_SLOWDOWN+1
-	color = "clown"
+	color_ = "clown"
 
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
 	desc = "Nanotrasen issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
 	icon_state = "jackboots"
 	item_state = "jackboots"
-	color = "hosred"
+	color_ = "hosred"
 
 /obj/item/clothing/shoes/purpleboots
 	name = "purple boots"
@@ -182,7 +182,7 @@
 /obj/item/clothing/shoes/fullbrown
 	name = "full brown shoes"
 	icon_state = "fullbrown"
-	color = "fullbrown"
+	color_ = "fullbrown"
 
 /obj/item/clothing/shoes/batman_boots
 	name = "batman boots"

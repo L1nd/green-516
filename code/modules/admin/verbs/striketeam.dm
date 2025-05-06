@@ -147,7 +147,7 @@ var/global/sent_strike_team = 0
 	R.set_frequency(1441)
 	equip_if_possible(R, slot_ears)
 	if (leader_selected == 0)
-		equip_if_possible(new /obj/item/clothing/under/color/green(src), slot_w_uniform)
+		equip_if_possible(new /obj/item/clothing/under/color_/green(src), slot_w_uniform)
 	else
 		equip_if_possible(new /obj/item/clothing/under/rank/centcom_officer(src), slot_w_uniform)
 	equip_if_possible(new /obj/item/clothing/shoes/swat(src), slot_shoes)

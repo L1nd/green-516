@@ -133,7 +133,7 @@
 			if (!M.moved_recently && M.last_move)
 				M.moved_recently = 1
 				step(M, M.last_move)
-				sleep 50
+				sleep(50)
 				if(M)
 					M.moved_recently = 0
 		M.show_message("\red <B>You feel a sharp shock!</B>")
