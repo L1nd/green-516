@@ -12,7 +12,7 @@
 	w_class = 2.0
 	throw_speed = 2
 	throw_range = 10
-	var/catch = 1
+	var/safety_on = 1
 
 /obj/item/weapon/cleaner/New()
 	var/datum/reagents/R = new/datum/reagents(250)
@@ -24,13 +24,13 @@
 	return
 
 /obj/item/weapon/cleaner/attack_self(var/mob/user as mob)
-	if(catch)
+	if(safety_on)
 		user << "\blue You flip the safety off."
-		catch = 0
+		safety_osafety_on = 0
 		return
 	else
 		user << "\blue You flip the safety on."
-		catch = 1
+		safety_osafety_on = 1
 		return
 
 /obj/item/weapon/cleaner/afterattack(atom/A as mob|obj, mob/user as mob)
@@ -38,7 +38,7 @@
 		return
 	if (istype(A, /obj/effect/proc_holder/spell ))
 		return
-	else if (catch == 1)
+	else if (safety_on == 1)
 		user << "\blue The safety is on!"
 		return
 	else if (src.reagents.total_volume < 1)
@@ -228,7 +228,7 @@
 	w_class = 2.0
 	throw_speed = 2
 	throw_range = 10
-	var/catch = 1
+	var/safety_on = 1
 	var/BottleSize = 1
 	var/ReagentAmount = 45
 
@@ -244,7 +244,7 @@
 	w_class = 1.0
 	throw_speed = 2
 	throw_range = 10
-	catch = 1
+	safety_on = 1
 	BottleSize = 0
 	ReagentAmount = 1
 
@@ -258,13 +258,13 @@
 	return
 
 /obj/item/weapon/pepperspray/attack_self(var/mob/user as mob)
-	if(catch)
+	if(safety_on)
 		user << "\blue You flip the safety off."
-		catch = 0
+		safety_osafety_on = 0
 		return
 	else
 		user << "\blue You flip the safety on."
-		catch = 1
+		safety_osafety_on = 1
 		return
 
 /obj/item/weapon/pepperspray/afterattack(atom/A as mob|obj, mob/user as mob)
@@ -283,7 +283,7 @@
 		else
 			user << "\blue Pepper spray is already full!"
 			return
-	else if (catch == 1)
+	else if (safety_on == 1)
 		user << "\blue The safety is on!"
 		return
 	else if (src.reagents.total_volume < 1)
@@ -390,7 +390,7 @@
 	w_class = 2.0
 	throw_speed = 2
 	throw_range = 10
-	catch = 1
+	safety_on = 1
 	BottleSize = 1
 	ReagentAmount = 1000
 
@@ -404,13 +404,13 @@
 	return
 
 /obj/item/weapon/pepperspray/elited/attack_self(var/mob/user as mob)
-	if(catch)
+	if(safety_on)
 		user << "\blue You flip the safety off."
-		catch = 0
+		safety_osafety_on = 0
 		return
 	else
 		user << "\blue You flip the safety on."
-		catch = 1
+		safety_osafety_on = 1
 		return
 
 /obj/item/weapon/pepperspray/elited/afterattack(atom/A as mob|obj, mob/user as mob)
@@ -429,7 +429,7 @@
 		else
 			user << "\blue Pepper spray is already full!"
 			return
-	else if (catch == 1)
+	else if (safety_on == 1)
 		user << "\blue The safety is on!"
 		return
 	else if (src.reagents.total_volume < 1)
