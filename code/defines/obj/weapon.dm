@@ -70,12 +70,12 @@
 
 /obj/item/weapon/nullrod/attack(mob/M as mob, mob/living/user as mob)
 
-	M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been attacked with [src.name] by [user.name] ([user.ckey])</font>")
-	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Used the [src.name] to attack [M.name] ([M.ckey])</font>")
+	M.attack_log += text("\[[time_stamp()]\] <font color_='orange'>Has been attacked with [src.name] by [user.name] ([user.ckey])</font>")
+	user.attack_log += text("\[[time_stamp()]\] <font color_='red'>Used the [src.name] to attack [M.name] ([M.ckey])</font>")
 
 	log_admin("ATTACK: [user] ([user.ckey]) attacked [M] ([M.ckey]) with [src].")
 	message_admins("ATTACK: [user] ([user.ckey])(<A HREF='?src=%admin_ref%;adminplayerobservejump=\ref[user]'>JMP</A>) attacked [M] ([M.ckey]) with [src].", 2)
-	log_attack("<font color='red'>[user.name] ([user.ckey]) attacked [M.name] ([M.ckey]) with [src.name] (INTENT: [uppertext(user.a_intent)])</font>")
+	log_attack("<font color_='red'>[user.name] ([user.ckey]) attacked [M.name] ([M.ckey]) with [src.name] (INTENT: [uppertext(user.a_intent)])</font>")
 
 	if (!(istype(user, /mob/living/carbon/human) || ticker) && ticker.mode.name != "monkey")
 		user << "\red You don't have the dexterity to do this!"
@@ -418,7 +418,7 @@
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
 
 /obj/item/weapon/melee/energy/sword
-	color
+	color_
 	name = "energy sword"
 	desc = "It cuts AND cooks at the same time!"
 	icon_state = "sword0"
@@ -432,7 +432,7 @@
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 
 /obj/item/weapon/melee/energy/sword/chainsword
-	color = "chain"
+	color_ = "chain"
 	New()
 		return
 
@@ -510,75 +510,75 @@
 	w_class = 1.0
 	throw_speed = 2
 	throw_range = 10
-	color = "white"
+	color_ = "white"
 
 /obj/item/weapon/bedsheet/blue
 	icon_state = "sheetblue"
-	color = "blue"
+	color_ = "blue"
 
 /obj/item/weapon/bedsheet/green
 	icon_state = "sheetgreen"
-	color = "green"
+	color_ = "green"
 
 /obj/item/weapon/bedsheet/orange
 	icon_state = "sheetorange"
-	color = "orange"
+	color_ = "orange"
 
 /obj/item/weapon/bedsheet/purple
 	icon_state = "sheetpurple"
-	color = "purple"
+	color_ = "purple"
 
 /obj/item/weapon/bedsheet/rainbow
 	icon_state = "sheetrainbow"
-	color = "rainbow"
+	color_ = "rainbow"
 
 /obj/item/weapon/bedsheet/red
 	icon_state = "sheetred"
-	color = "red"
+	color_ = "red"
 
 /obj/item/weapon/bedsheet/yellow
 	icon_state = "sheetyellow"
-	color = "yellow"
+	color_ = "yellow"
 
 /obj/item/weapon/bedsheet/mime
 	icon_state = "sheetmime"
-	color = "mime"
+	color_ = "mime"
 
 /obj/item/weapon/bedsheet/clown
 	icon_state = "sheetclown"
-	color = "clown"
+	color_ = "clown"
 
 /obj/item/weapon/bedsheet/captain
 	icon_state = "sheetcaptain"
-	color = "captain"
+	color_ = "captain"
 
 /obj/item/weapon/bedsheet/rd
 	icon_state = "sheetrd"
-	color = "director"
+	color_ = "director"
 
 /obj/item/weapon/bedsheet/medical
 	icon_state = "sheetmedical"
-	color = "medical"
+	color_ = "medical"
 
 /obj/item/weapon/bedsheet/hos
 	icon_state = "sheethos"
-	color = "hosred"
+	color_ = "hosred"
 
 /obj/item/weapon/bedsheet/hop
 	icon_state = "sheethop"
-	color = "hop"
+	color_ = "hop"
 
 /obj/item/weapon/bedsheet/ce
 	icon_state = "sheetce"
-	color = "chief"
+	color_ = "chief"
 
 /obj/item/weapon/bedsheet/brown
 	icon_state = "sheetbrown"
-	color = "brown"
+	color_ = "brown"
 
 /obj/item/weapon/bedsheet/prisoner
 	icon_state = "prisonsheet"
-	color = "prisonsheet"
+	color_ = "prisonsheet"
 
 /obj/item/weapon/bikehorn
 	name = "bike horn"
@@ -847,7 +847,7 @@
 	icon = 'power.dmi'
 	icon_state = "coil_red"
 	var/amount = MAXCOIL
-	color = "red"
+	color_ = "red"
 	desc = "A coil of power cable."
 	throwforce = 10
 	w_class = 2.0
@@ -864,36 +864,36 @@
 	item_state = "coil_red2"
 
 /obj/item/weapon/cable_coil/yellow
-	color = "yellow"
+	color_ = "yellow"
 	icon_state = "coil_yellow"
 
 /obj/item/weapon/cable_coil/blue
-	color = "blue"
+	color_ = "blue"
 	icon_state = "coil_blue"
 
 /obj/item/weapon/cable_coil/green
-	color = "green"
+	color_ = "green"
 	icon_state = "coil_green"
 
 /obj/item/weapon/cable_coil/pink
-	color = "pink"
+	color_ = "pink"
 	icon_state = "coil_pink"
 
 /obj/item/weapon/cable_coil/orange
-	color = "orange"
+	color_ = "orange"
 	icon_state = "coil_orange"
 
 /obj/item/weapon/cable_coil/cyan
-	color = "cyan"
+	color_ = "cyan"
 	icon_state = "coil_cyan"
 
 /obj/item/weapon/cable_coil/white
-	color = "white"
+	color_ = "white"
 	icon_state = "coil_white"
 
 /obj/item/weapon/cable_coil/random/New()
-	color = pick("red","yellow","green","blue","pink")
-	icon_state = "coil_[color]"
+	color_ = pick("red","yellow","green","blue","pink")
+	icon_state = "coil_[color_]"
 	..()
 
 
@@ -1886,52 +1886,52 @@ eternal248: Found broken and buggy Z-levels 7-12, ended up leading to my discove
 	throw_speed = 7
 	throw_range = 15
 	m_amt = 60
-	color = "cargo"
+	color_ = "cargo"
 
 /obj/item/weapon/stamp/captain
 	name = "captain's rubber stamp"
 	icon_state = "stamp-cap"
-	color = "captain"
+	color_ = "captain"
 
 /obj/item/weapon/stamp/hop
 	name = "head of personnel's rubber stamp"
 	icon_state = "stamp-hop"
-	color = "hop"
+	color_ = "hop"
 
 /obj/item/weapon/stamp/hos
 	name = "head of security's rubber stamp"
 	icon_state = "stamp-hos"
-	color = "hosred"
+	color_ = "hosred"
 
 /obj/item/weapon/stamp/ce
 	name = "chief engineer's rubber stamp"
 	icon_state = "stamp-ce"
-	color = "chief"
+	color_ = "chief"
 
 /obj/item/weapon/stamp/rd
 	name = "research director's rubber stamp"
 	icon_state = "stamp-rd"
-	color = "director"
+	color_ = "director"
 
 /obj/item/weapon/stamp/cmo
 	name = "chief medical officer's rubber stamp"
 	icon_state = "stamp-cmo"
-	color = "medical"
+	color_ = "medical"
 
 /obj/item/weapon/stamp/denied
 	name = "DENIED rubber stamp"
 	icon_state = "stamp-qm"
-	color = "redcoat"
+	color_ = "redcoat"
 
 /obj/item/weapon/stamp/clown
 	name = "clown's rubber stamp"
 	icon_state = "stamp-clown"
-	color = "clown"
+	color_ = "clown"
 
 /obj/item/weapon/stamp/centcom
 	name = "central command rubber stamp"
 	icon_state = "stamp-cent"
-	color = "centcom"
+	color_ = "centcom"
 
 /*
 /obj/item/weapon/cigarpacket
@@ -2258,7 +2258,7 @@ eternal248: Found broken and buggy Z-levels 7-12, ended up leading to my discove
 	desc = "A sachet of flavoring, designed to be used with \"LiquidFood\" rations.  The flavor is indeterminable."
 	icon = 'food_ingredients.dmi'
 	var/descriptor = "disturbingly beige" //Description shown to onlookers.
-	color = "beige" //Color the icon should take on when this is applied.  Also shown when it is mixed in.
+	color_ = "beige" //Color the icon should take on when this is applied.  Also shown when it is mixed in.
 	var/newDesc = "It posesses a strange and unidentifiable taste.  You try not to think to hard about it." //What gets pegged onto the description.
 
 /obj/item/weapon/flavor/red
@@ -2266,7 +2266,7 @@ eternal248: Found broken and buggy Z-levels 7-12, ended up leading to my discove
 	desc = "A sachet of cherry flavoring, designed to be used with \"LiquidFood\" rations."
 	icon_state = "flavor-red"
 	descriptor = "garrishly red"
-	color = "red"
+	color_ = "red"
 	newDesc = "It has a faintly cherry taste, but still is hard to stomach. Reminds you of cough syrup."
 
 /obj/item/weapon/flavor/blue
@@ -2274,5 +2274,5 @@ eternal248: Found broken and buggy Z-levels 7-12, ended up leading to my discove
 	desc = "A sachet of berry flavoring, designed to be used with \"LiquidFood\" rations."
 	icon_state = "flavor-blue"
 	descriptor = "molted blue"
-	color = "blue"
+	color_ = "blue"
 	newDesc = "It has a faint bitter berry taste, but still is hard to stomach. Strangely crunchy."

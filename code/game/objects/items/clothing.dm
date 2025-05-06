@@ -109,7 +109,7 @@ THERMAL GLASSES
 /obj/item/clothing/under/chameleon/New()
 	..()
 
-	for(var/U in typesof(/obj/item/clothing/under/color)-(/obj/item/clothing/under/color))
+	for(var/U in typesof(/obj/item/clothing/under/color_)-(/obj/item/clothing/under/color_))
 
 		var/obj/item/clothing/under/V = new U
 		src.clothing_choices += V
@@ -175,17 +175,17 @@ THERMAL GLASSES
 	name = A.name
 	icon_state = A.icon_state
 	item_state = A.item_state
-	color = A.color
+	color_ = A.color_
 
 /obj/item/clothing/under/chameleon/emp_act(severity)
 	name = "Groovy Jumpsuit"
 	desc = "A groovy jumpsuit! It seems to have a small dial on the wrist, that won't stop spinning."
 	icon_state = "psyche"
-	color = "psyche"
+	color_ = "psyche"
 	spawn(200)
 		name = "Black Jumpsuit"
 		icon_state = "bl_suit"
-		color = "black"
+		color_ = "black"
 		desc = null
 	..()
 

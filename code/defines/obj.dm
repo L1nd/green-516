@@ -125,11 +125,11 @@
 		var/dat = {"
 		<head><style>
 			.manifest {border-collapse:collapse;}
-			.manifest td, th {border:1px solid [monochrome?"black":"#DEF; background-color:white; color:black"]; padding:.25em}
-			.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color: #48C; color:white"]}
-			.manifest tr.head th { [monochrome?"border-top-width: 1px":"background-color: #488;"] }
+			.manifest td, th {border:1px solid [monochrome?"black":"#DEF; background-color_:white; color_:black"]; padding:.25em}
+			.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color_: #48C; color_:white"]}
+			.manifest tr.head th { [monochrome?"border-top-width: 1px":"background-color_: #488;"] }
 			.manifest td:first-child {text-align:right}
-			.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: #DEF"]}
+			.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color_: #DEF"]}
 		</style></head>
 		<table class="manifest">
 		<tr class='head'><th>Name</th><th>Rank</th></tr>
@@ -461,7 +461,7 @@
 
 	//Since any item can now be a piece of clothing, this has to be put here so all items share it.
 	var/see_face = 1.0
-	var/color = null
+	var/color_ = null
 	var/body_parts_covered = 0 //see setup.dm for appropriate bit flags
 	var/protective_temperature = 0
 	var/heat_transfer_coefficient = 1 //0 prevents all transfers, 1 is invisible
@@ -705,35 +705,35 @@
 	var/d1 = 0
 	var/d2 = 1
 	layer = 2.44 //Just below unary stuff, which is at 2.45 and above pipes, which are at 2.4
-	var/color="red"
+	var/color_="red"
 	var/obj/structure/powerswitch/power_switch
 
 /obj/structure/cable/yellow
-	color="yellow"
+	color_="yellow"
 	icon = 'power_cond_yellow.dmi'
 
 /obj/structure/cable/green
-	color="green"
+	color_="green"
 	icon = 'power_cond_green.dmi'
 
 /obj/structure/cable/blue
-	color="blue"
+	color_="blue"
 	icon = 'power_cond_blue.dmi'
 
 /obj/structure/cable/pink
-	color="pink"
+	color_="pink"
 	icon = 'power_cond_pink.dmi'
 
 /obj/structure/cable/orange
-	color="orange"
+	color_="orange"
 	icon = 'power_cond_orange.dmi'
 
 /obj/structure/cable/cyan
-	color="cyan"
+	color_="cyan"
 	icon = 'power_cond_cyan.dmi'
 
 /obj/structure/cable/white
-	color="white"
+	color_="white"
 	icon = 'power_cond_white.dmi'
 
 /obj/effect/manifest

@@ -3,7 +3,7 @@
 /obj/item/weapon/implant/freedom
 	name = "freedom"
 	desc = "Use this to escape from those evil Red Shirts."
-	color = "r"
+	color_ = "r"
 	var/activation_emote = "chuckle"
 	var/uses = 1.0
 
@@ -46,7 +46,7 @@
 <b>Implant Specifications:</b><BR>
 <b>Name:</b> Freedom Beacon<BR>
 <b>Life:</b> optimum 5 uses<BR>
-<b>Important Notes:</b> <font color='red'>Illegal</font><BR>
+<b>Important Notes:</b> <font color_='red'>Illegal</font><BR>
 <HR>
 <b>Implant Details:</b> <BR>
 <b>Function:</b> Transmits a specialized cluster of signals to override handcuff locking

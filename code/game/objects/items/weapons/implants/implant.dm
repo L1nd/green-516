@@ -5,7 +5,7 @@
 	icon_state = "implant"
 	var/implanted = null
 	var/mob/imp_in = null
-	color = "b"
+	color_ = "b"
 	var/allow_reagents = 0
 
 	proc/trigger(emote, source as mob)
@@ -249,7 +249,7 @@ the implant may become unstable and either pre-maturely inject the subject or si
 <b>Implant Specifications:</b><BR>
 <b>Name:</b> Cybersun Industries Adrenalin Implant<BR>
 <b>Life:</b> Five days.<BR>
-<b>Important Notes:</b> <font color='red'>Illegal</font><BR>
+<b>Important Notes:</b> <font color_='red'>Illegal</font><BR>
 <HR>
 <b>Implant Details:</b> Subjects injected with implant can activate a massive injection of adrenalin.<BR>
 <b>Function:</b> Contains nanobots to stimulate body to mass-produce Adrenalin.<BR>

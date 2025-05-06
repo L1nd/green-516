@@ -598,7 +598,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		if ("standard space gear")
 			M.equip_if_possible(new /obj/item/clothing/shoes/black(M), M.slot_shoes)
 
-			M.equip_if_possible(new /obj/item/clothing/under/color/grey(M), M.slot_w_uniform)
+			M.equip_if_possible(new /obj/item/clothing/under/color_/grey(M), M.slot_w_uniform)
 			M.equip_if_possible(new /obj/item/clothing/suit/space(M), M.slot_wear_suit)
 			M.equip_if_possible(new /obj/item/clothing/head/helmet/space(M), M.slot_head)
 			var /obj/item/weapon/tank/jetpack/J = new /obj/item/weapon/tank/jetpack/oxygen(M)
@@ -608,9 +608,9 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			J.Topic(null, list("stat" = 1))
 		if ("tournament standard red","tournament standard green") //we think stunning weapon is too overpowered to use it on tournaments. --rastaf0
 			if (dresscode=="tournament standard red")
-				M.equip_if_possible(new /obj/item/clothing/under/color/red(M), M.slot_w_uniform)
+				M.equip_if_possible(new /obj/item/clothing/under/color_/red(M), M.slot_w_uniform)
 			else
-				M.equip_if_possible(new /obj/item/clothing/under/color/green(M), M.slot_w_uniform)
+				M.equip_if_possible(new /obj/item/clothing/under/color_/green(M), M.slot_w_uniform)
 			M.equip_if_possible(new /obj/item/clothing/shoes/black(M), M.slot_shoes)
 
 			M.equip_if_possible(new /obj/item/clothing/suit/armor/vest(M), M.slot_wear_suit)
