@@ -90,8 +90,8 @@
 	var/monkeyizing = null//Carbon
 	var/other = 0.0
 	var/hand = null
-	var/eye_blind = null//Carbon
-	var/eye_blurry = null//Carbon
+	var/eye_blind = 0 //Carbon
+	var/eye_blurry = 0 //Carbon
 	var/ear_deaf = null//Carbon
 	var/ear_damage = null//Carbon
 	var/stuttering = null//Carbon
