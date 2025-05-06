@@ -21,7 +21,6 @@ obj/machinery/atmospherics
 
 
 	var/initialize_directions = 0
-	var/color
 
 	process()
 		build_network()
