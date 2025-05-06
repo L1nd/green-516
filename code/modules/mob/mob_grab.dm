@@ -16,7 +16,7 @@
 	w_class = 5.0
 
 
-/obj/item/weapon/grab/proc/throw()
+/obj/item/weapon/grab/proc/throw_()
 	if(affecting)
 		var/grabee = affecting
 		spawn(0)

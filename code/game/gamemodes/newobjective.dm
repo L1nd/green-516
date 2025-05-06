@@ -133,96 +133,96 @@
 			var/datum/objective/objective = pickweight(theftobjectives)
 			chosenobjectives += objective
 			total_weight += objective.points
-			theftobjectives -= objective
-		else switch(selectobj)
-			if(1 to steal_range)
-				if(!theftobjectives.len)
-					continue
-				var/datum/objective/objective = pickweight(theftobjectives)
-				for(1 to 10)
-					if(objective.points + total_weight <= 100 || !theftobjectives.len)
-						break
-					theftobjectives -= objective
-					objective = pickweight(theftobjectives)
-				if(!objective && !theftobjectives.len)
-					continue
-				chosenobjectives += objective
-				total_weight += objective.points
-				theftobjectives -= objective
-			if(steal_range + 1 to frame_range)	//Framing Objectives (3% chance)
-				if(!frameobjectives.len)
-					continue
-				var/datum/objective/objective = pickweight(frameobjectives)
-				for(1 to 10)
-					if(objective.points + total_weight <= 100 || !frameobjectives.len)
-						break
-					frameobjectives -= objective
-					objective = pickweight(frameobjectives)
-				if(!objective && !frameobjectives.len)
-					continue
-				for(var/datum/objective/protection/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Assassinate somebody they need to Protect.
-					if(conflicttest.target == objective.target)
-						conflict = 1
-						break
-				for(var/datum/objective/assassinate/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Protect somebody they need to Assassinate.
-					if(conflicttest.target == objective.target)
-						conflict = 1
-						break
-				if(!conflict)
-					chosenobjectives += objective
-					total_weight += objective.points
-				frameobjectives -= objective
-				conflict = 0
-			if(frame_range + 1 to kill_range)
-				if(!killobjectives.len)
-					continue
-				var/datum/objective/assassinate/objective = pickweight(killobjectives)
-				world << objective
-				for(1 to 10)
-					if(objective.points + total_weight <= 100 || !killobjectives.len)
-						break
-					killobjectives -= objective
-					objective = pickweight(killobjectives)
-				if(!objective && !killobjectives.len)
-					continue
-				for(var/datum/objective/protection/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Assassinate somebody they need to Protect.
-					if(conflicttest.target == objective.target)
-						conflict = 1
-						break
-				for(var/datum/objective/frame/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Protect somebody they need to Assassinate.
-					if(conflicttest.target == objective.target)
-						conflict = 1
-						break
-				if(!conflict)
-					chosenobjectives += objective
-					total_weight += objective.points
-				killobjectives -= objective
-				conflict = 0
-			if(kill_range + 1 to 100)	//Protection Objectives (5% chance)
-				if(!protectobjectives.len)
-					continue
-				var/datum/objective/protection/objective = pickweight(protectobjectives)
-				for(1 to 10)
-					if(objective.points + total_weight <= 100 || !protectobjectives.len)
-						break
-					protectobjectives -= objective
-					objective = pickweight(protectobjectives)
-				if(!objective || !protectobjectives.len)
-					continue
-				for(var/datum/objective/assassinate/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Protect somebody they need to Assassinate.
-					if(conflicttest.target == objective.target)
-						conflict = 1
-						break
-				for(var/datum/objective/frame/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Protect somebody they need to Assassinate.
-					if(conflicttest.target == objective.target)
-						conflict = 1
-						break
-				if(!conflict)
-					chosenobjectives += objective
-					total_weight += objective.points
-				protectobjectives -= objective
-				conflict = 0
-
+//			theftobjectives -= objective
+//		else switch(selectobj)
+//			if()
+//				if(!theftobjectives.len)
+//					continue
+//				var/datum/objective/objective = pickweight(theftobjectives)
+//				for(1 to 10)
+//					if(objective.points + total_weight <= 100 || !theftobjectives.len)
+//						break
+//					theftobjectives -= objective
+//					objective = pickweight(theftobjectives)
+//				if(!objective && !theftobjectives.len)
+//					continue
+//				chosenobjectives += objective
+//				total_weight += objective.points
+//				theftobjectives -= objective
+//			if(steal_range + 1 to frame_range)	//Framing Objectives (3% chance)
+//				if(!frameobjectives.len)
+//					continue
+//				var/datum/objective/objective = pickweight(frameobjectives)
+//				for(1 to 10)
+//					if(objective.points + total_weight <= 100 || !frameobjectives.len)
+//						break
+//					frameobjectives -= objective
+//					objective = pickweight(frameobjectives)
+//				if(!objective && !frameobjectives.len)
+//					continue
+//				for(var/datum/objective/protection/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Assassinate somebody they need to Protect.
+//					if(conflicttest.target == objective.target)
+//						conflict = 1
+//						break
+//				for(var/datum/objective/assassinate/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Protect somebody they need to Assassinate.
+//					if(conflicttest.target == objective.target)
+//						conflict = 1
+//						break
+//				if(!conflict)
+//					chosenobjectives += objective
+//					total_weight += objective.points
+//				frameobjectives -= objective
+//				conflict = 0
+//			if(frame_range + 1 to kill_range)
+//				if(!killobjectives.len)
+//					continue
+//				var/datum/objective/assassinate/objective = pickweight(killobjectives)
+//				world << objective
+//				for(1 to 10)
+//					if(objective.points + total_weight <= 100 || !killobjectives.len)
+//						break
+//					killobjectives -= objective
+//					objective = pickweight(killobjectives)
+//				if(!objective && !killobjectives.len)
+//					continue
+//				for(var/datum/objective/protection/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Assassinate somebody they need to Protect.
+//					if(conflicttest.target == objective.target)
+//						conflict = 1
+//						break
+//				for(var/datum/objective/frame/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Protect somebody they need to Assassinate.
+//					if(conflicttest.target == objective.target)
+//						conflict = 1
+//						break
+//				if(!conflict)
+//					chosenobjectives += objective
+//					total_weight += objective.points
+//				killobjectives -= objective
+//				conflict = 0
+//			if(kill_range + 1 to 100)	//Protection Objectives (5% chance)
+//				if(!protectobjectives.len)
+//					continue
+//				var/datum/objective/protection/objective = pickweight(protectobjectives)
+//				for(1 to 10)
+//					if(objective.points + total_weight <= 100 || !protectobjectives.len)
+//						break
+//					protectobjectives -= objective
+//					objective = pickweight(protectobjectives)
+//				if(!objective || !protectobjectives.len)
+//					continue
+//				for(var/datum/objective/assassinate/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Protect somebody they need to Assassinate.
+//					if(conflicttest.target == objective.target)
+//						conflict = 1
+//						break
+//				for(var/datum/objective/frame/conflicttest in chosenobjectives)	//Check to make sure we aren't telling them to Protect somebody they need to Assassinate.
+//					if(conflicttest.target == objective.target)
+//						conflict = 1
+//						break
+//				if(!conflict)
+//					chosenobjectives += objective
+//					total_weight += objective.points
+//				protectobjectives -= objective
+//				conflict = 0
+//
 	if(!locate(/datum/objective/hijack) in chosenobjectives && !locate(/datum/objective/escape) in chosenobjectives)
 		if(hijack)
 			chosenobjectives += new /datum/objective/hijack(null,job)

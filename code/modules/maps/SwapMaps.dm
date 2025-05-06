@@ -135,7 +135,10 @@ swapmap
 	var/tmp/locked	// don't move anyone to this map; it's saving or loading
 	var/tmp/mode	// save as text-mode
 	var/ischunk		// tells the load routine to load to the specified location
-
+	var/x
+	var/y
+	var/n
+	var/z
 	New(_id,x,y,z)
 		if(isnull(_id)) return
 		id=_id
@@ -201,12 +204,14 @@ swapmap
 		        vars    // all other changed vars
 	 */
 	Write(savefile/S)
-		
-		var/x;y;z;n
-		var/list/areas
+		var/areas=list()	
+		var/x
+		var/y
+		var/z
+		var/n
 		var/area/defarea=locate(world.area)
 		if(!defarea) defarea=new world.area
-		var/areas=list()
+		
 		for(var/turf/T in block(locate(x1,y1,z1),locate(x2,y2,z2)))
 			areas[T.loc]=null
 		for(n in areas)	// quickly eliminate associations for smaller storage
