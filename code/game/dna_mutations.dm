@@ -21,8 +21,7 @@ This system could be expanded to migrate all of our current mutations to. Maybe.
 	var/list/races = list("human") // list of races the mutation effect
 
 	proc/get_mutation(var/mob/living/carbon/M) // Called when check_mutation() is successful
-		..()
-
+		return()
 	proc/check_mutation(var/mob/living/carbon/M) // Called in dna.dm, when a target's SE is modified
 
 		if(! ("all" in races)) // "all" means it affects everyone!

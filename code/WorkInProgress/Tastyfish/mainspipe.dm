@@ -4,7 +4,7 @@ obj/machinery/atmospherics/pipe/mains_component
 	var/list/obj/machinery/atmospherics/pipe/mains_component/nodes = new()
 
 	New(loc)
-		..(loc)
+		New(loc)
 		parent_pipe = loc
 
 	check_pressure(pressure)
@@ -56,7 +56,7 @@ obj/machinery/atmospherics/mains_pipe
 	alert_pressure = 55*ONE_ATMOSPHERE
 
 	New()
-		..()
+		New()
 
 		supply = new(src)
 		supply.volume = volume
@@ -74,7 +74,7 @@ obj/machinery/atmospherics/mains_pipe
 		update_icon()
 
 	proc/burst()
-		..()
+		burst()
 		for(var/obj/machinery/atmospherics/pipe/mains_component/pipe in contents)
 			burst()
 

@@ -445,7 +445,7 @@
 		return 0
 	if(buckled && ! istype(buckled, /obj/structure/stool/bed/chair)) // buckling does not restrict hands
 		return 0
-	return ..()
+	return ()
 
 /mob/proc/is_active()
 	return (0 >= usr.stat)

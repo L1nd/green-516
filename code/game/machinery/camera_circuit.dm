@@ -59,7 +59,7 @@
 		if(secured)
 			return
 		if (!ishuman(user))
-			return ..(user)
+			return (user)
 		var/t = "<B>Circuitboard Console - Camera Monitoring Computer</B><BR>"
 		t += "<A href='?src=\ref[src];close=1'>Close</A><BR>"
 		t += "<hr> Please select a camera network:<br>"

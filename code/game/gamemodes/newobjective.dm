@@ -60,7 +60,7 @@
 	var/list/frameobjectives = GenerateFrame(job,traitor)
 	var/list/protectobjectives = GenerateProtection(job,traitor)
 	var/total_weight
-	var/conflict
+//	var/conflict
 
 	var/steal_weight = THEFT_PROBABILITY
 	var/frame_weight = FRAME_PROBABILITY
@@ -122,13 +122,13 @@
 		steal_weight = round(steal_weight/total_weights)
 		//Protect is whatever is left over.
 
-	var/steal_range = steal_weight
-	var/frame_range = frame_weight + steal_range
-	var/kill_range = kill_weight + frame_range
+//	var/steal_range = steal_weight
+//	var/frame_range = frame_weight + steal_range
+	//var/kill_range = kill_weight + frame_range
 	//Protect is whatever is left over.
 
 	while(total_weight < target_weight)
-		var/selectobj = rand(1,100)	//Randomly determine the type of objective to be given.
+	//	var/selectobj = rand(1,100)	//Randomly determine the type of objective to be given.
 		if(!length(killobjectives) || !length(protectobjectives)|| !length(frameobjectives))	//If any of these lists are empty, just give them theft objectives.
 			var/datum/objective/objective = pickweight(theftobjectives)
 			chosenobjectives += objective
@@ -1220,7 +1220,6 @@ datum
 				job = joba
 				explanation_text = "Remove and recover the head of [target.current.real_name], the [target.assigned_role]."
 			proc/find_target()
-				..()
 				if(target && target.current)
 					explanation_text = "[target.current.real_name], the [target.role_alt_title ? target.role_alt_title : target.assigned_role], has defied us for the last time.  Make an example of him, and bring us his severed head."
 				else
@@ -1321,7 +1320,6 @@ datum
 				explanation_text = "Remove and recover the brain of [target.current.real_name], the [target.assigned_role]."
 
 			proc/find_target()
-				..()
 				if(target && target.current)
 					explanation_text = "Steal the brain of [target.current.real_name]."
 				else
@@ -1352,7 +1350,6 @@ datum
 
 		mutiny
 			proc/find_target()
-				..()
 				if(target && target.current)
 					explanation_text = "Assassinate [target.current.real_name], the [target.role_alt_title ? target.role_alt_title : target.assigned_role]."
 				else

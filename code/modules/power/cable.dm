@@ -258,7 +258,7 @@
 		src.use(15)
 	else
 		usr << "\blue You cannot do that."
-	..()
+	return()
 
 /obj/item/weapon/cable_coil/verb/make_slipknot()
 	set name = "Make Cable Slipknot"
@@ -276,10 +276,9 @@
 		src.use(15)
 	else
 		usr << "\blue You cannot do that."
-	..()
+	return()
 
 /obj/item/weapon/cable_coil/attackby(obj/item/weapon/W, mob/user)
-	..()
 	if( istype(W, /obj/item/weapon/wirecutters) && src.amount > 1)
 		src.amount--
 		new/obj/item/weapon/cable_coil(user.loc, 1,color)

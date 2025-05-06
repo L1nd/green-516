@@ -115,7 +115,7 @@ var/global/list/autolathe_recipes_hidden = list( \
 			onclose(user, "autolathe_regular")
 
 		interact(mob/user as mob)
-			if(..())
+			if(/mob/living())
 				return
 			if (src.shocked)
 				src.shock(user,50)

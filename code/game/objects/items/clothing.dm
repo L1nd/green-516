@@ -206,8 +206,7 @@ THERMAL GLASSES
 
 /obj/item/clothing/under/rank/New()
 	sensor_mode = pick(0,1,2,3)
-	..()
-
+	return()
 /obj/item/clothing/under/verb/toggle()
 	set name = "Toggle Suit Sensors"
 	set category = "Object"
@@ -232,11 +231,10 @@ THERMAL GLASSES
 			usr << "Your suit will now report your vital lifesigns."
 		if(3)
 			usr << "Your suit will now report your vital lifesigns as well as your coordinate position."
-	..()
+	return()
 
 /obj/item/clothing/under/examine()
 	set src in view()
-	..()
 	switch(src.sensor_mode)
 		if(0)
 			usr << "Its sensors appear to be disabled."
