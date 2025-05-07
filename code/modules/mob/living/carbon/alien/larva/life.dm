@@ -34,7 +34,7 @@
 	//blinded get reset each cycle and then get activated later in the
 	//code. Very ugly. I dont care. Moving this stuff here so its easy
 	//to find it.
-	blinded = 0
+	blinded = null
 
 	//Mind update
 	update_mind()

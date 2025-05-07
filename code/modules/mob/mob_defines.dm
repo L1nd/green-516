@@ -101,7 +101,7 @@
 	var/flavor_text = ""
 	var/med_record = ""
 	var/sec_record = ""
-	var/blinded = 0
+	var/blinded = null
 	var/bhunger = 0//Carbon
 	var/ajourn = 0
 	var/rejuv = null
