@@ -40,7 +40,7 @@ var/intercom_range_display_status = 0
 		set category = "Mapping"
 		set name = "-None of these are for ingame use!!"
 
-		return()
+		..()
 
 	camera_view()
 		set category = "Mapping"

@@ -77,4 +77,4 @@
 			world.Reboot()
 			return
 
-	return (gibbed)
+	return ..(gibbed)
