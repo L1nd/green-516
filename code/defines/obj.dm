@@ -461,7 +461,7 @@
 
 	//Since any item can now be a piece of clothing, this has to be put here so all items share it.
 	var/see_face = 1.0
-	var/color_ = null
+	var/icon/color_ = null
 	var/body_parts_covered = 0 //see setup.dm for appropriate bit flags
 	var/protective_temperature = 0
 	var/heat_transfer_coefficient = 1 //0 prevents all transfers, 1 is invisible
@@ -705,7 +705,7 @@
 	var/d1 = 0
 	var/d2 = 1
 	layer = 2.44 //Just below unary stuff, which is at 2.45 and above pipes, which are at 2.4
-	var/color_="red"
+	var/icon/color_="red"
 	var/obj/structure/powerswitch/power_switch
 
 /obj/structure/cable/yellow

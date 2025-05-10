@@ -145,9 +145,8 @@ GUEST_JOBBAN 1
 # FEATURE_OBJECT_SPELL_SYSTEM
 
 ## Count of max players who can enter
-MAX_PLAYERS 35
-ANOTHER_SERVER byond://ss13.ru:2508
-REDIRECT_IF_FULL ss13.ru:2508
+MAX_PLAYERS 100
+
 
 ##Toggle for having jobs load up from the .txt
 # LOAD_JOBS_FROM_TXT
@@ -163,7 +162,7 @@ REDIRECT_IF_FULL ss13.ru:2508
 # APPEAL_ADDRESS http://example.com
 
 ##Defines the ticklag for the world.  0.9 is the normal one, 0.5 is smoother.
-TICKLAG 0.9
+TICKLAG 0.5
 
 ## Defines if Tick Compensation is used.  It results in a minor slowdown of movement of all mobs, but attempts to result in a level movement speed across all ticks.  Recommended if tickrate is lowered.
 TICKCOMP 0
@@ -172,4 +171,4 @@ TICKCOMP 0
 SOCKET_TALK 0
 
 ## Uncomment to restrict non-admins using humanoid alien races
-USEALIENWHITELIST
+# USEALIENWHITELIST
